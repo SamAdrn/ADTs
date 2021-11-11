@@ -7,7 +7,12 @@ package list;
  * field called {@link #size} to keep track on the number elements the
  * {@code List} is storing.
  *
- * @param <E>
+ * @author Samuel Adrian Kosasih
+ *
+ * @param <E> a generic type parameter to determine the type of elements in the
+ *           list
+ * @see List
+ * @version 1.1
  */
 public abstract class AbstractList<E> implements List<E>{
 

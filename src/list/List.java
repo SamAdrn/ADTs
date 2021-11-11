@@ -22,6 +22,7 @@ import java.util.Collection;
  *           list
  * @see Iterable
  * @see java.util.Iterator Iterator
+ * @version 1.1
  */
 public interface List<E> extends Iterable<E> {
 

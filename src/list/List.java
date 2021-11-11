@@ -16,13 +16,12 @@ import java.util.Collection;
  * of elements through an {@link java.util.Iterator Iterator}. The iterator
  * will also be defined by the user.
  *
- * @author Samuel Adrian Kosasih
- *
  * @param <E> a generic type parameter to determine the type of elements in the
- *           list
+ *            list
+ * @author Samuel Adrian Kosasih
+ * @version 1.1
  * @see Iterable
  * @see java.util.Iterator Iterator
- * @version 1.1
  */
 public interface List<E> extends Iterable<E> {
 
@@ -195,6 +194,7 @@ public interface List<E> extends Iterable<E> {
     /**
      * Clears the <code>List</code> such that it is empty and ready to be
      * used again.
+     *
      * @since 1.1
      */
     void clear();

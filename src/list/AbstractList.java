@@ -1,7 +1,20 @@
 package list;
 
+/**
+ * This abstract class provides a skeletal implementation of the {@link List}
+ * interface. Some methods that share similar behaviors across all
+ * {@code Lists}s are implemented here, along with a protected {@code int}
+ * field called {@link #size} to keep track on the number elements the
+ * {@code List} is storing.
+ *
+ * @param <E>
+ */
 public abstract class AbstractList<E> implements List<E>{
 
+    /**
+     * A field to keep track of the number of elements currently stored in the
+     * <code>List</code>
+     */
     protected int size;
 
     /**

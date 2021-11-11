@@ -2,7 +2,28 @@ package list;
 
 import java.util.Collection;
 
-public interface List<E> {
+/**
+ * This is the root interface of the {@code List} hierarchy.
+ * <br><br>
+ * {@code List}s are data structures that store an ordered collection of
+ * objects in which the user has precise control over where an object
+ * should be inserted. Elements can be accessed by their integer index, which
+ * represents their position in the list starting from {@code 0}. Furthermore,
+ * {@code List}s allow various mutations to how elements are being stored, and
+ * it is up to the user how these methods are to be implemented.
+ * <br><br>
+ * {@code List}s also extend the {@link Iterable} interface to allow iteration
+ * of elements through an {@link java.util.Iterator Iterator}. The iterator
+ * will also be defined by the user.
+ *
+ * @author Samuel Adrian Kosasih
+ *
+ * @param <E> a generic type parameter to determine the type of elements in the
+ *           list
+ * @see Iterable
+ * @see java.util.Iterator Iterator
+ */
+public interface List<E> extends Iterable<E> {
 
     /**
      * Appends <code>element</code> to the end of the <code>List</code>.

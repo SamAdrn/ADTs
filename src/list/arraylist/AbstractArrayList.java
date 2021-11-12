@@ -2,7 +2,6 @@ package list.arraylist;
 
 import list.AbstractList;
 
-import java.util.Collection;
 import java.util.Iterator;
 
 /**
@@ -31,6 +30,7 @@ import java.util.Iterator;
  * @author Samuel Adrian Kosasih
  * @version 1.1
  * @see AbstractList
+ * @see ArrayList
  */
 public abstract class AbstractArrayList<E> extends AbstractList<E>
         implements ArrayList<E> {
@@ -39,18 +39,6 @@ public abstract class AbstractArrayList<E> extends AbstractList<E>
      * An array storing objects of type {@link E}.
      */
     protected E[] arr;
-
-    /**
-     * Appends <code>element</code> to the end of the <code>ArrayList</code>.
-     *
-     * @param element the element to be added to the end of the list
-     * @return <code>true</code> to indicate a change has been made to the list
-     * @since 1.1
-     */
-    @Override
-    public boolean add(E element) {
-        return add(size, element);
-    }
 
     /**
      * Inserts <code>element</code> to a position in the <code>ArrayList</code>
@@ -79,42 +67,6 @@ public abstract class AbstractArrayList<E> extends AbstractList<E>
         return true;
     }
 
-    /**
-     * Appends a <code>Collection</code> of elements to the end of the
-     * <code>ArrayList</code>.
-     *
-     * @param c a <code>Collection</code> containing the elements to be added
-     * @throws NullPointerException if the <code>Collection</code> of objects
-     *                              specified is <code>null</code>
-     * @see Collection
-     * @since 1.1
-     */
-    @Override
-    public void addAll(Collection<? extends E> c) {
-        addAll(size, c);
-    }
-
-    /**
-     * Inserts a <code>Collection</code> of elements to a position in the
-     * <code>ArrayList</code> specified by <code>index</code>.
-     *
-     * @param index the index position where the <code>Collection</code> of
-     *              elements should be inserted
-     * @param c     the <code>Collection</code> containing elements to be inserted
-     * @throws NullPointerException if the <code>Collection</code> of objects
-     *                              specified is <code>null</code>
-     * @see Collection
-     * @since 1.1
-     */
-    @Override
-    public void addAll(int index, Collection<? extends E> c) {
-        if (c == null) {
-            throw new NullPointerException("Collection is null");
-        }
-        for (E e : c) {
-            this.add(index++, e);
-        }
-    }
 
     /**
      * Removes the element at a position in the <code>ArrayList</code>
@@ -272,7 +224,8 @@ public abstract class AbstractArrayList<E> extends AbstractList<E>
          * has already been removed.
          *
          * @throws IllegalStateException if the {@link #next()} has never been
-         *                               called or the element has already been removed
+         *                               called or the element has already been
+         *                               removed
          */
         @Override
         public void remove() throws IllegalStateException {

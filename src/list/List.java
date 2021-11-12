@@ -29,7 +29,7 @@ public interface List<E> extends Iterable<E> {
      * Appends <code>element</code> to the end of the <code>List</code>.
      *
      * @param element the element to be added to the end of the list
-     * @return true to indicate a change has been made to the list
+     * @return {@code true} to indicate a change has been made to the list
      * @since 1.1
      */
     boolean add(E element);
@@ -40,7 +40,7 @@ public interface List<E> extends Iterable<E> {
      *
      * @param index   the index position where the element should be inserted
      * @param element the element to be inserted
-     * @return true to indicate a change has been made to the list
+     * @return {@code true} to indicate a change has been made to the list
      * @since 1.1
      */
     boolean add(int index, E element);

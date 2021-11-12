@@ -4,8 +4,14 @@ import list.List;
 
 /**
  * This is the root interface of the <code>ArrayList</code> hierarchy. The
- * ArrayList is a data structure that stores a group of objects together in an
- * array. However, unlike an array, an <code>ArrayList</code> is resizeable.
+ * <code>ArrayList</code> is a data structure that stores a group of objects
+ * together in an array. However, unlike an array, an <code>ArrayList</code> is
+ * resizeable.
+ * <br><br>
+ * Although resizeable, an {@code ArrayList} requires that elements be manually
+ * shifted accordingly when performing insertion or removal in the middle of the
+ * array. Despite this trade-off, arrays are very efficient when it comes to
+ * retrieving elements anywhere in the list.
  * <br><br>
  * The <code>ArrayList</code> permits all elements, including <code>null</code>
  * and duplicates, to be stored within the object. However, due to the fact that
@@ -28,8 +34,8 @@ import list.List;
  *            <code>ArrayList</code> would store.
  * @author Samuel Adrian Kosasih
  * @version 1.1
- * @see Iterable
  * @see List
+ * @see Iterable
  */
 public interface ArrayList<E> extends List<E> {
 

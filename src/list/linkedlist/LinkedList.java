@@ -28,10 +28,9 @@ import list.List;
  * interface and provide an {@link java.util.Iterator Iterator} to allow looping
  * through the collection of objects, and to provide a for-each syntax.
  *
- * @author Samuel Adrian Kosasih
- *
  * @param <E> generic type parameter determining the type of object the
  *            {@code LinkedList} would store.
+ * @author Samuel Adrian Kosasih
  * @version 1.1
  * @see List
  * @see Iterable
@@ -48,6 +47,7 @@ public interface LinkedList<E> extends List<E> {
 
     /**
      * Inserts {@code element} to the tail of the {@code LinkedList}.
+     *
      * @param element the element to be inserted to the list
      * @return {@code true} to indicate a change has been made to the list
      */

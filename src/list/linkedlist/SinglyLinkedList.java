@@ -49,8 +49,8 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
     }
 
     /**
-     * Inserts <code>element</code> to a position in the <code>LinkedList</code>
-     * specified by <code>index</code>.
+     * Inserts {@code element} to a position in the {@code LinkedList}
+     * specified by {@code index}.
      *
      * @param index   the index position where the element should be inserted
      * @param element the element to be inserted
@@ -80,8 +80,8 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
 
 
     /**
-     * Inserts a <code>Collection</code> of elements to a position in the
-     * <code>LinkedList</code> specified by <code>index</code>.
+     * Inserts a {@code Collection} of elements to a position in the
+     * {@code LinkedList} specified by {@code index}.
      * <br><br>
      * This method is overridden from the {@link list.AbstractList} class to
      * implement a more efficient method of successively adding all
@@ -89,11 +89,11 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
      * through the list over and over again with every {@link #add(int, Object)}
      * method call.
      *
-     * @param index the index position where the <code>Collection</code> of
+     * @param index the index position where the {@code Collection} of
      *              elements should be inserted
-     * @param c     the <code>Collection</code> containing elements to be inserted
-     * @throws NullPointerException if the <code>Collection</code> of objects
-     *                              specified is <code>null</code>
+     * @param c     the {@code Collection} containing elements to be inserted
+     * @throws NullPointerException if the {@code Collection} of objects
+     *                              specified is {@code null}
      * @see Collection
      * @since 1.1
      */
@@ -123,8 +123,8 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
     }
 
     /**
-     * Removes the element at a position in the <code>LinkedList</code>
-     * specified by <code>index</code>.
+     * Removes the element at a position in the {@code LinkedList}
+     * specified by {@code index}.
      *
      * @param index the index position of the element to be removed
      * @return the element that was removed from the list
@@ -153,14 +153,14 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
 
     /**
      * Removes a set of elements between index positions specified by
-     * <code>from</code>, inclusive, and <code>to</code>, inclusive. If
+     * {@code from}, inclusive, and {@code to}, inclusive. If
      * {@code (from == to)}, then this method simply removes the element
      * specified at that index.
      *
      * @param from the index of the first element to be removed
      * @param to   the index of the last element to be removed
      * @return an array of elements that were removed from the
-     * <code>LinkedList</code>
+     * {@code LinkedList}
      * @since 1.1
      */
     @Override
@@ -189,8 +189,8 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
     }
 
     /**
-     * Replaces the element at the position specified by <code>index</code>
-     * with <code>newElement</code>.
+     * Replaces the element at the position specified by {@code index}
+     * with {@code newElement}.
      *
      * @param index      the index position of the element to be replaced
      * @param newElement the new element to replace the old element
@@ -212,7 +212,7 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
     }
 
     /**
-     * Retrieves the element at the position specified by <code>index</code>.
+     * Retrieves the element at the position specified by {@code index}.
      *
      * @param index the index position of the element to be retrieved
      * @return the element stored at the specified position
@@ -231,14 +231,14 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
     }
 
     /**
-     * Retrieves the <code>n</code>th occurrence of <code>element</code> within
-     * the <code>LinkedList</code>. If there is less than <code>n</code>
+     * Retrieves the {@code n}th occurrence of {@code element} within
+     * the {@code LinkedList}. If there is less than {@code n}
      * occurrences of the specified element, then this method will return
-     * <code>null</code>.
+     * {@code null}.
      *
      * @param element the element to be searched for
      * @param n       the number of element occurrences before returning
-     * @return the <code>n</code>th occurrence of <code>element</code>
+     * @return the {@code n}th occurrence of {@code element}
      * @since 1.1
      */
     @Override
@@ -257,16 +257,16 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
     }
 
     /**
-     * Retrieves the index of the <code>n</code>th occurrence of
-     * <code>element</code> within the <code>LinkedList</code>. If there is less
-     * than <code>n</code> occurrences of the specified element, then this
-     * method will return <code>-1</code>.
+     * Retrieves the index of the {@code n}th occurrence of
+     * {@code element} within the {@code LinkedList}. If there is less
+     * than {@code n} occurrences of the specified element, then this
+     * method will return {@code -1}.
      *
      * @param element the element to be searched for
      * @param n       the number of element occurrences before returning the
      *                index
-     * @return the index of the <code>n</code>th occurrence of
-     * <code>element</code>
+     * @return the index of the {@code n}th occurrence of
+     * {@code element}
      * @since 1.1
      */
     @Override
@@ -285,13 +285,13 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
     }
 
     /**
-     * Retrieves the number of times <code>element</code> occurs in the
-     * <code>LinkedList</code>. If the element does not exist, then this method
-     * will return <code>0</code>.
+     * Retrieves the number of times {@code element} occurs in the
+     * {@code LinkedList}. If the element does not exist, then this method
+     * will return {@code 0}.
      *
      * @param element the element to be searched for
-     * @return the number of times <code>element</code> occurs in the
-     * <code>List</code>
+     * @return the number of times {@code element} occurs in the
+     * {@code LinkedList}
      * @since 1.1
      */
     @Override
@@ -308,11 +308,11 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
     }
 
     /**
-     * Retrieves the index of the first occurrence of <code>element</code> in
-     * the <code>LinkedList</code>.
+     * Retrieves the index of the first occurrence of {@code element} in
+     * the {@code LinkedList}.
      *
      * @param element the element to be searched for
-     * @return the index of the first occurrence of <code>element</code>
+     * @return the index of the first occurrence of {@code element}
      * @since 1.1
      */
     @Override
@@ -328,12 +328,12 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
     }
 
     /**
-     * Retrieves the index of the last occurrence of <code>element</code> in the
-     * <code>LinkedList</code>. This means that the index returned will be the
-     * position of <code>element</code> furthest away from index <code>0</code>.
+     * Retrieves the index of the last occurrence of {@code element} in the
+     * {@code LinkedList}. This means that the index returned will be the
+     * position of {@code element} furthest away from index {@code 0}.
      *
      * @param element the element to be searched for
-     * @return the index of the last occurrence of <code>element</code>
+     * @return the index of the last occurrence of {@code element}
      * @since 1.1
      */
     @Override
@@ -350,7 +350,7 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
     }
 
     /**
-     * Returns an array containing the elements of the <code>LinkedList</code>
+     * Returns an array containing the elements of the {@code LinkedList}
      * in the order they are stored.
      *
      * @return an array containing all the elements
@@ -369,10 +369,10 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
 
     /**
      * Returns an iterator over elements of type {@code E}. The iterator for
-     * <code>ArrayList</code> objects is defined in the private inner class
+     * {@code LinkedList} objects is defined in the private inner class
      * {@link SinglyLinkedListIterator SinglyLinkedListIterator}.
      *
-     * @return an <code>Iterator</code>
+     * @return an {@code Iterator}
      * @see SinglyLinkedListIterator
      */
     @Override
@@ -381,13 +381,13 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
     }
 
     /**
-     * This private inner class provides an <code>Iterator</code> of type
-     * <code>E</code>, providing the functionality of looping through the
-     * elements of an <code>LinkedList</code>. This implementation offers support
+     * This private inner class provides an {@code Iterator} of type
+     * {@code E}, providing the functionality of looping through the
+     * elements of an {@code LinkedList}. This implementation offers support
      * for the {@link #remove()} method as well, and will not fail unless the
      * {@link #next()} method has never been called, or the element is already
      * removed. The iterator will not loop back to the beginning of the
-     * <code>LinkedList</code> once the end has been reached, rendering it
+     * {@code LinkedList} once the end has been reached, rendering it
      * unusable at that point.
      *
      * @see Iterator
@@ -412,7 +412,7 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
 
         /**
          * Constructor. Initializes the iterator to start at the beginning of
-         * the <code>LinkedList</code>.
+         * the {@code LinkedList}.
          */
         public SinglyLinkedListIterator() {
             prev = null;
@@ -423,7 +423,7 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
         /**
          * Indicates whether the iteration has more elements.
          *
-         * @return <code>true</code> if the <code>ArrayList</code> still has
+         * @return {@code true} if the {@code LinkedList} still has
          * more elements
          */
         @Override

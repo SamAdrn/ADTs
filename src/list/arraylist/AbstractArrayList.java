@@ -9,8 +9,8 @@ import java.util.Iterator;
  * {@link ArrayList} interface, outlining the methods and fields that would
  * have similar behaviors across various abstractions.
  * <br><br>
- * The array to be used by the <code>ArrayList</code> will be a protected
- * field {@link #arr} in this class. However, implementations that require array
+ * The array to be used by the {@code ArrayList} will be a protected field
+ * {@link #arr} in this class. However, implementations that require array
  * copying will not be implemented here, due to complications with casting for
  * different generic types {@link E}. It is recommended that every abstraction
  * implement these methods their own respective way.
@@ -20,13 +20,13 @@ import java.util.Iterator;
  * <br><br>
  * All {@code add} methods relies on the {@link #ensureCapacity(int)} method to
  * automatically resize the array in accordance to the need of space, adding
- * an extra space of <code>10</code>  elements everytime to the array is
- * fully filled. However, it does not remove that extra space automatically.
+ * an extra space of {@code 10}  elements everytime to the array is fully
+ * filled. However, it does not remove that extra space automatically.
  * <br><br>
  * Some behaviors are already defined in the {@link AbstractList} class.
  *
  * @param <E> generic type parameter determining the type of object the
- *            <code>ArrayList</code> would store.
+ *            {@code ArrayList} would store.
  * @author Samuel Adrian Kosasih
  * @version 1.1
  * @see AbstractList
@@ -41,13 +41,13 @@ public abstract class AbstractArrayList<E> extends AbstractList<E>
     protected E[] arr;
 
     /**
-     * Inserts <code>element</code> to a position in the <code>ArrayList</code>
-     * specified by <code>index</code>.
+     * Inserts {@code element} to a position in the {@code ArrayList}
+     * specified by {@code index}.
      *
      * @param index   the index position where the element should be inserted
      * @param element the element to be inserted
-     * @return <code>true</code> to indicate a change has been made to the list
-     * @throws IndexOutOfBoundsException if an invalid <code>index</code> has
+     * @return {@code true} to indicate a change has been made to the list
+     * @throws IndexOutOfBoundsException if an invalid {@code index} has
      *                                   been specified
      * @since 1.1
      */
@@ -69,12 +69,12 @@ public abstract class AbstractArrayList<E> extends AbstractList<E>
 
 
     /**
-     * Removes the element at a position in the <code>ArrayList</code>
-     * specified by <code>index</code>.
+     * Removes the element at a position in the {@code ArrayList}
+     * specified by {@code index}.
      *
      * @param index the index position of the element to be removed
      * @return the element that was removed from the list
-     * @throws IndexOutOfBoundsException if an invalid <code>index</code> has
+     * @throws IndexOutOfBoundsException if an invalid {@code index} has
      *                                   been specified
      * @since 1.1
      */
@@ -93,13 +93,13 @@ public abstract class AbstractArrayList<E> extends AbstractList<E>
     }
 
     /**
-     * Replaces the element at the position specified by <code>index</code>
-     * with <code>newElement</code>.
+     * Replaces the element at the position specified by {@code index}
+     * with {@code newElement}.
      *
      * @param index      the index position of the element to be replaced
      * @param newElement the new element to replace the old element
      * @return the element that had just been replaced
-     * @throws IndexOutOfBoundsException if an invalid <code>index</code> has
+     * @throws IndexOutOfBoundsException if an invalid {@code index} has
      *                                   been specified
      * @since 1.1
      */
@@ -114,11 +114,11 @@ public abstract class AbstractArrayList<E> extends AbstractList<E>
     }
 
     /**
-     * Retrieves the element at the position specified by <code>index</code>.
+     * Retrieves the element at the position specified by {@code index}.
      *
      * @param index the index position of the element to be retrieved
      * @return the element stored at the specified position
-     * @throws IndexOutOfBoundsException if an invalid <code>index</code> has
+     * @throws IndexOutOfBoundsException if an invalid {@code index} has
      *                                   been specified
      * @since 1.1
      */
@@ -131,13 +131,13 @@ public abstract class AbstractArrayList<E> extends AbstractList<E>
     }
 
     /**
-     * Provides a <code>String</code> representation to the whole
-     * <code>ArrayList</code> object, such that it prints out all the elements
+     * Provides a {@code String} representation to the whole
+     * {@code ArrayList} object, such that it prints out all the elements
      * current stored in it using the following format:
-     * <blockquote><code>[a1 a2 a3 a4 ... an]</code></blockquote>
+     * <blockquote>{@code [a1 a2 a3 a4 ... an]}</blockquote>
      *
-     * @return a <code>String</code> consisting of all the elements currently
-     * stored in the <code>ArrayList</code>
+     * @return a {@code String} consisting of all the elements currently
+     * stored in the {@code ArrayList}
      */
     @Override
     public String toString() {
@@ -150,10 +150,10 @@ public abstract class AbstractArrayList<E> extends AbstractList<E>
 
     /**
      * Returns an iterator over elements of type {@code E}. The iterator for
-     * <code>ArrayList</code> objects is defined in the private inner class
+     * {@code ArrayList} objects is defined in the private inner class
      * {@link ArrayListIterator ArrayListIterator}.
      *
-     * @return an <code>Iterator</code>
+     * @return an {@code Iterator}
      * @see ArrayListIterator
      */
     @Override
@@ -162,13 +162,13 @@ public abstract class AbstractArrayList<E> extends AbstractList<E>
     }
 
     /**
-     * This private inner class provides an <code>Iterator</code> of type
-     * <code>E</code>, providing the functionality of looping through the
-     * elements of an <code>ArrayList</code>. This implementation offers support
+     * This private inner class provides an {@code Iterator} of type
+     * {@code E}, providing the functionality of looping through the
+     * elements of an {@code ArrayList}. This implementation offers support
      * for the {@link #remove()} method as well, and will not fail unless the
      * {@link #next()} method has never been called, or the element is already
      * removed. The iterator will not loop back to the beginning of the
-     * <code>ArrayList</code> once the end has been reached, rendering it
+     * {@code ArrayList} once the end has been reached, rendering it
      * unusable at that point.
      *
      * @see Iterator
@@ -186,7 +186,7 @@ public abstract class AbstractArrayList<E> extends AbstractList<E>
 
         /**
          * Constructor. Initializes the iterator to start at the beginning of
-         * the <code>ArrayList</code>.
+         * the {@code ArrayList}.
          */
         public ArrayListIterator() {
             currentIndex = 0;
@@ -196,7 +196,7 @@ public abstract class AbstractArrayList<E> extends AbstractList<E>
         /**
          * Indicates whether the iteration has more elements.
          *
-         * @return <code>true</code> if the <code>ArrayList</code> still has
+         * @return {@code true} if the {@code ArrayList} still has
          * more elements
          */
         @Override

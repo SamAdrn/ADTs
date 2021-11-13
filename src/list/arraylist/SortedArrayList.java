@@ -20,7 +20,7 @@ package list.arraylist;
  * of the order of elements within the {@code ArrayList}.
  *
  * @param <E> generic type parameter determining the type of object the
- *            <code>ArrayList</code> would store.
+ *            {@code ArrayList} would store.
  * @author Samuel Adrian Kosasih
  * @version 1.1
  * @see ComparableArrayList
@@ -59,15 +59,15 @@ public class SortedArrayList<E extends Comparable<E>>
     }
 
     /**
-     * Inserts <code>element</code> to the appropriate position of the
-     * <code>SortedArrayList</code>.
+     * Inserts {@code element} to the appropriate position of the
+     * {@code SortedArrayList}.
      * <br><br>
-     * Due to constraints of the <code>SortedArrayList</code>, this method
-     * will return <code>false</code> if it takes in a <code>null</code>
+     * Due to constraints of the {@code SortedArrayList}, this method
+     * will return {@code false} if it takes in a {@code null}
      * element.
      *
      * @param element the element to be inserted into the list
-     * @return <code>true</code> if {@code element} is successfully added to the
+     * @return {@code true} if {@code element} is successfully added to the
      * list
      * @since 1.1
      */
@@ -100,15 +100,15 @@ public class SortedArrayList<E extends Comparable<E>>
     }
 
     /**
-     * Inserts <code>element</code> to a position in the <code>ArrayList</code>
-     * specified by <code>index</code>.
+     * Inserts {@code element} to a position in the {@code ArrayList}
+     * specified by {@code index}.
      *
      * @param index   the index position where the element should be inserted
      * @param element the element to be inserted
-     * @return <code>true</code> to indicate a change has been made to the list
+     * @return {@code true} to indicate a change has been made to the list
      * @since 1.1
      * @deprecated adding by index is not supported in a
-     * <code>SortedArrayList</code>
+     * {@code SortedArrayList}
      */
     @Override
     public boolean add(int index, E element)
@@ -118,12 +118,11 @@ public class SortedArrayList<E extends Comparable<E>>
     }
 
     /**
-     * Indicates whether <code>element</code> exists within the
-     * <code>List</code>.
+     * Indicates whether {@code element} exists within the {@code ArrayList}.
      *
      * @param element the element to be searched for
-     * @return <code>true</code> if <code>element</code> exists in the
-     * <code>List</code>
+     * @return {@code true} if {@code element} exists in the
+     * {@code ArrayList}
      * @since 1.1
      */
     @Override
@@ -132,8 +131,7 @@ public class SortedArrayList<E extends Comparable<E>>
     }
 
     /**
-     * Retrieves the index of <code>element</code> in the
-     * <code>ArrayList</code>.
+     * Retrieves the index of {@code element} in the {@code ArrayList}.
      * <br><br>
      * If duplicate elements exist, then this method will return the index
      * of any of the occurrences of element. The point of this method is to
@@ -142,7 +140,7 @@ public class SortedArrayList<E extends Comparable<E>>
      * implementation.
      *
      * @param element the element to be searched for
-     * @return the index of any occurrence of <code>element</code>
+     * @return the index of any occurrence of {@code element}
      * @since 1.1
      */
     public int fastIndexOf(E element) {

@@ -139,13 +139,13 @@ public abstract class AbstractLinkedList<E> extends AbstractList<E>
     }
 
     /**
-     * Provides a <code>String</code> representation to the whole
-     * <code>LinkedList</code> object, such that it prints out all the elements
+     * Provides a {@code String} representation to the whole
+     * {@code List} object, such that it prints out all the elements
      * current stored in it using the following format:
-     * <blockquote><code>[a1 a2 a3 a4 ... an]</code></blockquote>
+     * <blockquote>{@code [a1 a2 a3 a4 ... an]}</blockquote>
      *
-     * @return a <code>String</code> consisting of all the elements currently
-     * stored in the <code>LinkedList</code>
+     * @return a {@code String} consisting of all the elements currently
+     * stored in the {@code List}
      */
     @Override
     public String toString() {

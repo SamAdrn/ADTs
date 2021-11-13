@@ -16,12 +16,12 @@ package list.arraylist;
  * elements inside the {@code Collection}.</blockquote>
  *
  * @param <E> generic type parameter determining the type of object the
- *            <code>ArrayList</code> would store.
+ *            {@code ArrayList} would store.
  * @author Samuel Adrian Kosasih
+ * @version 1.1
  * @see ArrayList
  * @see AbstractArrayList
  * @see Comparable
- * @version 1.1
  */
 @SuppressWarnings({"unchecked"})
 public class ComparableArrayList<E extends Comparable<E>> extends
@@ -61,14 +61,14 @@ public class ComparableArrayList<E extends Comparable<E>> extends
 
     /**
      * Removes a set of elements between index positions specified by
-     * <code>from</code>, inclusive, and <code>to</code>, inclusive. If
+     * {@code from}, inclusive, and {@code to}, inclusive. If
      * {@code (from == to)}, then this method simply removes the element
      * specified at that index.
      *
      * @param from the index of the first element to be removed
      * @param to   the index of the last element to be removed
      * @return an array of elements that were removed from the
-     * <code>ArrayList</code>
+     * {@code ArrayList}
      * @throws IndexOutOfBoundsException if invalid indices were specified
      * @since 1.1
      */
@@ -91,18 +91,16 @@ public class ComparableArrayList<E extends Comparable<E>> extends
     }
 
     /**
-     * Retrieves the <code>n</code>th occurrence of <code>element</code> within
-     * the <code>ArrayList</code>. If there is less than <code>n</code>
-     * occurrences of the specified element, then this method will return
-     * <code>null</code>.
-     *
+     * Retrieves the {@code n}th occurrence of {@code element} within the
+     * {@code ArrayList}. If there is less than {@code n} occurrences of the
+     * specified element, then this method will return {@code null}.
      * <br><br>
      * Equal elements are tested using the following logic
      * {@code (o == null ? e == null : o.compareTo(e))}
      *
      * @param element the element to be searched for
      * @param n       the number of element occurrences before returning
-     * @return the <code>n</code>th occurrence of <code>element</code>
+     * @return the {@code n}th occurrence of {@code element}
      * @since 1.1
      */
     @Override
@@ -122,18 +120,18 @@ public class ComparableArrayList<E extends Comparable<E>> extends
     }
 
     /**
-     * Retrieves the index of the <code>n</code>th occurrence of
-     * <code>element</code> within the <code>ArrayList</code>. If there is less
-     * than <code>n</code> occurrences of the specified element, then this
-     * method will return <code>-1</code>.
+     * Retrieves the index of the {@code n}th occurrence of {@code element}
+     * within the {@code ArrayList}. If there is less than {@code n} occurrences
+     * of the specified element, then this method will return {@code -1}.
      * <br><br>
      * Equal elements are tested using the following logic
      * {@code (o == null ? e == null : o.compareTo(e))}
      *
      * @param element the element to be searched for
-     * @param n       the number of element occurrences before returning the index
-     * @return the index of the <code>n</code>th occurrence of
-     * <code>element</code>
+     * @param n       the number of element occurrences before returning the
+     *                index
+     * @return the index of the {@code n}th occurrence of
+     * {@code element}
      * @since 1.1
      */
     @Override
@@ -153,16 +151,16 @@ public class ComparableArrayList<E extends Comparable<E>> extends
     }
 
     /**
-     * Retrieves the number of times <code>element</code> occurs in the
-     * <code>ArrayList</code>. If the element does not exist, then this method
-     * will return <code>0</code>.
+     * Retrieves the number of times {@code element} occurs in the
+     * {@code ArrayList}. If the element does not exist, then this method
+     * will return {@code 0}.
      * <br><br>
      * Equal elements are tested using the following logic
      * {@code (o == null ? e == null : o.compareTo(e))}
      *
      * @param element the element to be searched for
-     * @return the number of times <code>element</code> occurs in the
-     * <code>ArrayList</code>
+     * @return the number of times {@code element} occurs in the
+     * {@code ArrayList}
      * @since 1.1
      */
     @Override
@@ -178,14 +176,14 @@ public class ComparableArrayList<E extends Comparable<E>> extends
     }
 
     /**
-     * Retrieves the index of the first occurrence of <code>element</code> in
-     * the <code>ArrayList</code>.
+     * Retrieves the index of the first occurrence of {@code element} in
+     * the {@code ArrayList}.
      * <br><br>
      * Equal elements are tested using the following logic
      * {@code (o == null ? e == null : o.compareTo(e))}
      *
      * @param element the element to be searched for
-     * @return the index of the first occurrence of <code>element</code>
+     * @return the index of the first occurrence of {@code element}
      * @since 1.1
      */
     @Override
@@ -200,15 +198,15 @@ public class ComparableArrayList<E extends Comparable<E>> extends
     }
 
     /**
-     * Retrieves the index of the last occurrence of <code>element</code> in the
-     * <code>ArrayList</code>. This means that the index returned will be the
-     * position of <code>element</code> furthest away from index <code>0</code>.
+     * Retrieves the index of the last occurrence of {@code element} in the
+     * {@code ArrayList}. This means that the index returned will be the
+     * position of {@code element} furthest away from index {@code 0}.
      * <br><br>
      * Equal elements are tested using the following logic
      * {@code (o == null ? e == null : o.compareTo(e))}
      *
      * @param element the element to be searched for
-     * @return the index of the last occurrence of <code>element</code>
+     * @return the index of the last occurrence of {@code element}
      * @since 1.1
      */
     @Override
@@ -224,8 +222,8 @@ public class ComparableArrayList<E extends Comparable<E>> extends
     }
 
     /**
-     * Returns an array containing the elements of the <code>ArrayList</code>
-     * in the order they are stored.
+     * Returns an array containing the elements of the {@code ArrayList} in the
+     * order they are stored.
      *
      * @return an array containing all the elements
      * @since 1.1
@@ -243,8 +241,8 @@ public class ComparableArrayList<E extends Comparable<E>> extends
     }
 
     /**
-     * Clears the <code>ArrayList</code> such that it is empty and ready to be
-     * used again.
+     * Clears the {@code ArrayList} such that it is empty and ready to be used
+     * again.
      *
      * @since 1.1
      */
@@ -255,15 +253,15 @@ public class ComparableArrayList<E extends Comparable<E>> extends
     }
 
     /**
-     * Increases the capacity of the array being used by the
-     * <code>ArrayList</code> to be able to store <code>n</code> number of
-     * elements specified by <code>newSize</code>.
+     * Increases the capacity of the array being used by the {@code ArrayList}
+     * to be able to store {@code n} number of elements specified by
+     * {@code newSize}.
      * <br><br>
      * Note that this method does not offer the functionality to reduce the
      * capacity of the array.
      *
      * @param newSize the new and bigger capacity for the array
-     * @return <code>true</code> to indicate that a change has been made to the
+     * @return {@code true} to indicate that a change has been made to the
      * capacity of the array
      * @since 1.1
      */
@@ -286,7 +284,7 @@ public class ComparableArrayList<E extends Comparable<E>> extends
 
     /**
      * Trims the capacity of the current array being used by the
-     * <code>ArrayList</code> to remove excessive and unnecessary space.
+     * {@code ArrayList} to remove excessive and unnecessary space.
      *
      * @since 1.1
      */

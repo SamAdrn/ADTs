@@ -26,7 +26,7 @@ import java.util.Collection;
 public interface List<E> extends Iterable<E> {
 
     /**
-     * Appends <code>element</code> to the end of the <code>List</code>.
+     * Appends {@code element} to the end of the {@code List}.
      *
      * @param element the element to be added to the end of the list
      * @return {@code true} to indicate a change has been made to the list
@@ -35,8 +35,8 @@ public interface List<E> extends Iterable<E> {
     boolean add(E element);
 
     /**
-     * Inserts <code>element</code> to a position in the <code>List</code>
-     * specified by <code>index</code>.
+     * Inserts {@code element} to a position in the {@code List} specified by
+     * {@code index}.
      *
      * @param index   the index position where the element should be inserted
      * @param element the element to be inserted
@@ -46,30 +46,29 @@ public interface List<E> extends Iterable<E> {
     boolean add(int index, E element);
 
     /**
-     * Appends a <code>Collection</code> of elements to the end of the
-     * <code>List</code>.
+     * Appends a {@code Collection} of elements to the end of the {@code List}.
      *
-     * @param c a <code>Collection</code> containing the elements to be added
+     * @param c a {@code Collection} containing the elements to be added
      * @see Collection
      * @since 1.1
      */
     void addAll(Collection<? extends E> c);
 
     /**
-     * Inserts a <code>Collection</code> of elements to a position in the
-     * <code>List</code> specified by <code>index</code>.
+     * Inserts a {@code Collection} of elements to a position in the
+     * {@code List} specified by {@code index}.
      *
-     * @param index the index position where the <code>Collection</code> of
+     * @param index the index position where the {@code Collection} of
      *              elements should be inserted
-     * @param c     the <code>Collection</code> containing elements to be inserted
+     * @param c     the {@code Collection} containing elements to be inserted
      * @see Collection
      * @since 1.1
      */
     void addAll(int index, Collection<? extends E> c);
 
     /**
-     * Removes the element at a position in the <code>List</code>
-     * specified by <code>index</code>.
+     * Removes the element at a position in the {@code List} specified by
+     * {@code index}.
      *
      * @param index the index position of the element to be removed
      * @return the element that was removed from the list
@@ -79,21 +78,21 @@ public interface List<E> extends Iterable<E> {
 
     /**
      * Removes a set of elements between index positions specified by
-     * <code>from</code>, inclusive, and <code>to</code>, inclusive. If
+     * {@code from}, inclusive, and {@code to}, inclusive. If
      * {@code (from == to)}, then this method simply removes the element
      * specified at that index.
      *
      * @param from the index of the first element to be removed
      * @param to   the index of the last element to be removed
      * @return an array of elements that were removed from the
-     * <code>List</code>
+     * {@code List}
      * @since 1.1
      */
     E[] removeRange(int from, int to);
 
     /**
-     * Replaces the element at the position specified by <code>index</code>
-     * with <code>newElement</code>.
+     * Replaces the element at the position specified by {@code index} with
+     * {@code newElement}.
      *
      * @param index      the index position of the element to be replaced
      * @param newElement the new element to replace the old element
@@ -103,7 +102,7 @@ public interface List<E> extends Iterable<E> {
     E set(int index, E newElement);
 
     /**
-     * Retrieves the element at the position specified by <code>index</code>.
+     * Retrieves the element at the position specified by {@code index}.
      *
      * @param index the index position of the element to be retrieved
      * @return the element stored at the specified position
@@ -112,79 +111,75 @@ public interface List<E> extends Iterable<E> {
     E get(int index);
 
     /**
-     * Retrieves the <code>n</code>th occurrence of <code>element</code> within
-     * the <code>List</code>. If there is less than <code>n</code>
-     * occurrences of the specified element, then this method will return
-     * <code>null</code>.
+     * Retrieves the {@code n}th occurrence of {@code element} within the
+     * {@code List}. If there is less than {@code n} occurrences of the
+     * specified element, then this method will return {@code null}.
      *
      * @param element the element to be searched for
      * @param n       the number of element occurrences before returning
-     * @return the <code>n</code>th occurrence of <code>element</code>
+     * @return the {@code n}th occurrence of {@code element}
      * @since 1.1
      */
     E getNthOccurrence(E element, int n);
 
     /**
-     * Retrieves the index of the <code>n</code>th occurrence of
-     * <code>element</code> within the <code>List</code>. If there is less
-     * than <code>n</code> occurrences of the specified element, then this
-     * method will return <code>-1</code>.
+     * Retrieves the index of the {@code n}th occurrence of {@code element}
+     * within the {@code List}. If there is less than {@code n} occurrences of
+     * the specified element, then this method will return {@code -1}.
      *
      * @param element the element to be searched for
-     * @param n       the number of element occurrences before returning the index
-     * @return the index of the <code>n</code>th occurrence of
-     * <code>element</code>
+     * @param n       the number of element occurrences before returning the
+     *                index
+     * @return the index of the {@code n}th occurrence of
+     * {@code element}
      * @since 1.1
      */
     int getNthOccurrenceIndex(E element, int n);
 
     /**
-     * Retrieves the number of times <code>element</code> occurs in the
-     * <code>List</code>. If the element does not exist, then this method
-     * will return <code>0</code>.
+     * Retrieves the number of times {@code element} occurs in the {@code List}.
+     * If the element does not exist, then this method will return {@code 0}.
      *
      * @param element the element to be searched for
-     * @return the number of times <code>element</code> occurs in the
-     * <code>List</code>
+     * @return the number of times {@code element} occurs in the {@code List}
      * @since 1.1
      */
     int getOccurrences(E element);
 
     /**
-     * Indicates whether <code>element</code> exists within the
-     * <code>List</code>.
+     * Indicates whether {@code element} exists within the {@code List}.
      *
      * @param element the element to be searched for
-     * @return <code>true</code> if <code>element</code> exists in the
-     * <code>List</code>
+     * @return {@code true} if {@code element} exists in the
+     * {@code List}
      * @since 1.1
      */
     boolean contains(E element);
 
     /**
-     * Retrieves the index of the first occurrence of <code>element</code> in
-     * the <code>List</code>.
+     * Retrieves the index of the first occurrence of {@code element} in the
+     * {@code List}.
      *
      * @param element the element to be searched for
-     * @return the index of the first occurrence of <code>element</code>
+     * @return the index of the first occurrence of {@code element}
      * @since 1.1
      */
     int indexOf(E element);
 
     /**
-     * Retrieves the index of the last occurrence of <code>element</code> in the
-     * <code>List</code>. This means that the index returned will be the
-     * position of <code>element</code> furthest away from index <code>0</code>.
+     * Retrieves the index of the last occurrence of {@code element} in the
+     * {@code List}. This means that the index returned will be the
+     * position of {@code element} furthest away from index {@code 0}.
      *
      * @param element the element to be searched for
-     * @return the index of the last occurrence of <code>element</code>
+     * @return the index of the last occurrence of {@code element}
      * @since 1.1
      */
     int lastIndexOf(E element);
 
     /**
-     * Returns an array containing the elements of the <code>List</code>
-     * in the order they are stored.
+     * Returns an array containing the elements of the {@code List} in the order
+     * they are stored.
      *
      * @return an array containing all the elements
      * @since 1.1
@@ -192,16 +187,14 @@ public interface List<E> extends Iterable<E> {
     E[] toArray();
 
     /**
-     * Clears the <code>List</code> such that it is empty and ready to be
-     * used again.
+     * Clears the {@code List} such that it is empty and ready to be used again.
      *
      * @since 1.1
      */
     void clear();
 
     /**
-     * Returns the number of elements currently stored in the
-     * <code>List</code>.
+     * Returns the number of elements currently stored in the {@code List}.
      *
      * @return the number of elements currently stored
      * @since 1.1
@@ -209,10 +202,9 @@ public interface List<E> extends Iterable<E> {
     int size();
 
     /**
-     * Indicates whether the <code>List</code> is empty (not storing any
-     * elements).
+     * Indicates whether the {@code List} is empty (not storing any elements).
      *
-     * @return <code>true</code> if the <code>List</code> is empty
+     * @return {@code true} if the {@code List} is empty
      * @since 1.1
      */
     boolean isEmpty();

@@ -19,15 +19,15 @@ public abstract class AbstractList<E> implements List<E> {
 
     /**
      * A field to keep track of the number of elements currently stored in the
-     * <code>List</code>
+     * {@code List}
      */
     protected int size;
 
     /**
-     * Appends <code>element</code> to the end of the <code>ArrayList</code>.
+     * Appends {@code element} to the end of the {@code List}.
      *
      * @param element the element to be added to the end of the list
-     * @return <code>true</code> to indicate a change has been made to the list
+     * @return {@code true} to indicate a change has been made to the list
      * @since 1.1
      */
     @Override
@@ -36,12 +36,11 @@ public abstract class AbstractList<E> implements List<E> {
     }
 
     /**
-     * Appends a <code>Collection</code> of elements to the end of the
-     * <code>List</code>.
+     * Appends a {@code Collection} of elements to the end of the {@code List}.
      *
-     * @param c a <code>Collection</code> containing the elements to be added
-     * @throws NullPointerException if the <code>Collection</code> of objects
-     *                              specified is <code>null</code>
+     * @param c a {@code Collection} containing the elements to be added
+     * @throws NullPointerException if the {@code Collection} of objects
+     *                              specified is {@code null}
      * @see Collection
      * @since 1.1
      */
@@ -51,14 +50,14 @@ public abstract class AbstractList<E> implements List<E> {
     }
 
     /**
-     * Inserts a <code>Collection</code> of elements to a position in the
-     * <code>List</code> specified by <code>index</code>.
+     * Inserts a {@code Collection} of elements to a position in the
+     * {@code List} specified by {@code index}.
      *
-     * @param index the index position where the <code>Collection</code> of
+     * @param index the index position where the {@code Collection} of
      *              elements should be inserted
-     * @param c     the <code>Collection</code> containing elements to be inserted
-     * @throws NullPointerException if the <code>Collection</code> of objects
-     *                              specified is <code>null</code>
+     * @param c     the {@code Collection} containing elements to be inserted
+     * @throws NullPointerException if the {@code Collection} of objects
+     *                              specified is {@code null}
      * @see Collection
      * @since 1.1
      */
@@ -73,12 +72,11 @@ public abstract class AbstractList<E> implements List<E> {
     }
 
     /**
-     * Indicates whether <code>element</code> exists within the
-     * <code>List</code>.
+     * Indicates whether {@code element} exists within the {@code List}.
      *
      * @param element the element to be searched for
-     * @return <code>true</code> if <code>element</code> exists in the
-     * <code>List</code>
+     * @return {@code true} if {@code element} exists in the
+     * {@code List}
      * @since 1.1
      */
     @Override
@@ -87,8 +85,7 @@ public abstract class AbstractList<E> implements List<E> {
     }
 
     /**
-     * Returns the number of elements currently stored in the
-     * <code>List</code>.
+     * Returns the number of elements currently stored in the {@code List}.
      *
      * @return the number of elements currently stored
      * @since 1.1
@@ -99,10 +96,9 @@ public abstract class AbstractList<E> implements List<E> {
     }
 
     /**
-     * Indicates whether the <code>List</code> is empty (not storing any
-     * elements).
+     * Indicates whether the {@code List} is empty (not storing any elements).
      *
-     * @return <code>true</code> if the <code>List</code> is empty
+     * @return {@code true} if the {@code List} is empty
      * @since 1.1
      */
     @Override

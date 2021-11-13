@@ -2,8 +2,6 @@ package list.linkedlist;
 
 import list.AbstractList;
 
-import java.util.Iterator;
-
 /**
  * This abstract class provides a skeletal implementation to the
  * {@link LinkedList} interface, outlining the methods and fields that would
@@ -40,7 +38,7 @@ public abstract class AbstractLinkedList<E> extends AbstractList<E>
      * in a {@code LinkedList}.
      *
      * @param <E> generic type parameter determining the type of object the
-     *           {@code LinkedList} would store.
+     *            {@code LinkedList} would store.
      */
     protected static class Node<E> {
 
@@ -83,7 +81,7 @@ public abstract class AbstractLinkedList<E> extends AbstractList<E>
      */
     @Override
     public E removeLast() {
-        return remove(size);
+        return remove(size - 1);
     }
 
     /**
@@ -137,45 +135,29 @@ public abstract class AbstractLinkedList<E> extends AbstractList<E>
      */
     @Override
     public E tail() {
-        return get(size);
+        return get(size - 1);
     }
 
     /**
-     * Returns an iterator over elements of type {@code E}. The iterator for
-     * <code>ArrayList</code> objects is defined in the private inner class
-     * {@link LinkedListIterator ArrayListIterator}.
+     * Provides a <code>String</code> representation to the whole
+     * <code>LinkedList</code> object, such that it prints out all the elements
+     * current stored in it using the following format:
+     * <blockquote><code>[a1 a2 a3 a4 ... an]</code></blockquote>
      *
-     * @return an <code>Iterator</code>
-     * @see LinkedListIterator
+     * @return a <code>String</code> consisting of all the elements currently
+     * stored in the <code>LinkedList</code>
      */
     @Override
-    public Iterator<E> iterator() {
-        return new LinkedListIterator();
-    }
-
-    private class LinkedListIterator implements Iterator<E> {
-
-        private Node<E> cur;
-        private Node<E> prev;
-
-        public LinkedListIterator() {
-            prev = null;
-            cur = head;
+    public String toString() {
+        if (size == 0) {
+            return "[]";
         }
-
-        @Override
-        public boolean hasNext() {
-            return cur != null;
-        }
-
-        @Override
-        public E next() {
-            E e = cur.element;
-            prev = cur;
+        StringBuilder str = new StringBuilder("[");
+        Node<E> cur = head;
+        for (int i = 0; i < size - 1; i++) {
+            str.append(cur.element).append(" ");
             cur = cur.next;
-            return e;
         }
-
+        return str.append(cur.element).append("]").toString();
     }
-
 }

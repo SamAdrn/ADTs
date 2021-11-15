@@ -31,6 +31,42 @@ import java.util.Objects;
 public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
 
     /**
+     * The reference to the head of the {@code LinkedList}
+     */
+    private Node<E> head;
+
+    /**
+     * This private inner class defines a node to be used for storing elements
+     * in a {@code LinkedList}.
+     *
+     * @param <E> generic type parameter determining the type of object the
+     *            {@code LinkedList} would store.
+     */
+    private static class Node<E> {
+
+        /**
+         * The element being stored by the node
+         */
+        private E element;
+
+        /**
+         * A reference to the node in the list that is next to this node.
+         */
+        private Node<E> next;
+
+        /**
+         * Constructor. Initializes the element to be stored in the node.
+         *
+         * @param e the element to be stored by the node
+         */
+        private Node(E e) {
+            element = e;
+            next = null;
+        }
+
+    }
+
+    /**
      * Default Constructor. Initializes a starting array of capacity {@code 10}.
      */
     public SinglyLinkedList() {
@@ -39,12 +75,12 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
     }
 
     /**
-     * Copy Constructor. Takes in another {@code SinglyLinkedList} object
+     * Copy Constructor. Takes in another {@code LinkedList} object
      * and creates a deep copy of it.
      *
      * @param sll the other {@code SinglyLinkedList} object to be copied
      */
-    public SinglyLinkedList(SinglyLinkedList<E> sll) {
+    public SinglyLinkedList(LinkedList<E> sll) {
         this.addAll(Arrays.asList(sll.toArray()));
     }
 
@@ -189,6 +225,18 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
     }
 
     /**
+     * Clears the {@code LinkedList} such that it is empty and ready to be
+     * used again.
+     *
+     * @since 1.1
+     */
+    @Override
+    public void clear() {
+        head = null;
+        size = 0;
+    }
+
+    /**
      * Replaces the element at the position specified by {@code index}
      * with {@code newElement}.
      *
@@ -308,6 +356,16 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
     }
 
     /**
+     * Retrieves the element stored at the head of the {@code LinkedList}.
+     *
+     * @return the element being stored at the head
+     */
+    @Override
+    public E head() {
+        return head.element;
+    }
+
+    /**
      * Retrieves the index of the first occurrence of {@code element} in
      * the {@code LinkedList}.
      *
@@ -365,6 +423,29 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
             cur = cur.next;
         }
         return eArr;
+    }
+
+    /**
+     * Provides a {@code String} representation to the whole
+     * {@code List} object, such that it prints out all the elements
+     * current stored in it using the following format:
+     * <blockquote>{@code [a1 a2 a3 a4 ... an]}</blockquote>
+     *
+     * @return a {@code String} consisting of all the elements currently
+     * stored in the {@code List}
+     */
+    @Override
+    public String toString() {
+        if (size == 0) {
+            return "[]";
+        }
+        StringBuilder str = new StringBuilder("[");
+        Node<E> cur = head;
+        for (int i = 0; i < size - 1; i++) {
+            str.append(cur.element).append(" ");
+            cur = cur.next;
+        }
+        return str.append(cur.element).append("]").toString();
     }
 
     /**

@@ -69,8 +69,8 @@ public class ArrayStack<E> implements Stack<E> {
         if (isEmpty()) {
             throw new EmptyStackException();
         }
-        E e = stack[size];
-        stack[size] = null;
+        E e = stack[size - 1];
+        stack[size - 1] = null;
         size--;
         return e;
     }
@@ -87,7 +87,7 @@ public class ArrayStack<E> implements Stack<E> {
         if (isEmpty()) {
             throw new EmptyStackException();
         }
-        return stack[size];
+        return stack[size - 1];
     }
 
     /**

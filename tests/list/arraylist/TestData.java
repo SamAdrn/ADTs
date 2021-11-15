@@ -35,10 +35,9 @@ class TestData {
         return arr;
     }
 
-    public static ArrayList<String> defaultList6() {
-        ArrayList<String> arr = new DefaultArrayList<>();
-        arr.addAll(Arrays.asList("anteater", "snowy owl", "crocodile", "puppy",
-                "meerkat", "crocodile", "sheep", "puppy", "parrot", "sheep"));
+    public static ArrayList<Integer> comparableList1() {
+        ArrayList<Integer> arr = new ComparableArrayList<>();
+        arr.addAll(Arrays.asList(1, 3, 9, 4, 5, 2, 10, 8, 6, 7));
         return arr;
     }
 

@@ -20,6 +20,17 @@ package polymorphiclist;
  * node. The only exception is that negative indices will throw an
  * {@link IndexOutOfBoundsException}.
  * <br><br>
+ * All update methods in {@code PolymorphicList} returns a reference to the
+ * head node to ensure the representation of the whole list is maintained. To
+ * perform updates, the method's return value must be reassigned to itself in
+ * order to make modifications to the list. For example:
+ * <blockquote>{@code polyList = polyList.add(10)}</blockquote>
+ * <br><br>
+ * To instantiate an empty polymorphic list, it's best to call the
+ * {@link EmptyList#getInstance()} method instead of adding an {@code null}
+ * element. For example: <blockquote>{@code PolymorphicList<E> polyList =
+ * EmptyList.getInstance()}</blockquote>
+ * <br><br>
  * The class is not considered as a {@link list.List List} since it requires a
  * different set of methods and return values. Furthermore, a
  * {@code PolymorphicList} object should be differentiated from a
@@ -110,7 +121,7 @@ public interface PolymorphicList<E extends Comparable<E>> {
      *
      * @return the element being stored at the tail
      */
-    E tail();
+    E tail() throws EmptyListException;
 
     /**
      * Retrieves the number of times {@code element} occurs in the

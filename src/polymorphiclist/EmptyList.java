@@ -140,8 +140,8 @@ public class EmptyList<E extends Comparable<E>> implements PolymorphicList<E> {
      * @return the element being stored at the tail
      */
     @Override
-    public E tail() {
-        return null;
+    public E tail() throws EmptyListException {
+        throw new EmptyListException();
     }
 
     /**
@@ -195,7 +195,7 @@ public class EmptyList<E extends Comparable<E>> implements PolymorphicList<E> {
      */
     @Override
     public boolean isEmpty() {
-        return false;
+        return true;
     }
 
     /**
@@ -220,6 +220,20 @@ public class EmptyList<E extends Comparable<E>> implements PolymorphicList<E> {
     @Override
     public EmptyList<E> clear() {
         return this;
+    }
+
+    /**
+     * Provides a {@code String} representation to the whole
+     * {@code PolymorphicList} object, such that it prints out all the elements
+     * current stored in it using the following format:
+     * <blockquote>{@code a1 a2 a3 a4 ... an}</blockquote>
+     *
+     * @return a {@code String} consisting of all the elements currently
+     * stored in the {@code PolymorphicList}
+     */
+    @Override
+    public String toString() {
+        return "";
     }
 
 }

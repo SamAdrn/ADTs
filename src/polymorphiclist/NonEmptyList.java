@@ -64,9 +64,9 @@ public class NonEmptyList<E extends Comparable<E>>
     @Override
     public NonEmptyList<E> add(E element, int index) {
         if (index == 0) {
-            return new NonEmptyList<>(element, next);
+            return new NonEmptyList<>(element, this);
         } else {
-            next = add(element, index - 1);
+            next = next.add(element, index - 1);
         }
         return this;
     }
@@ -165,7 +165,11 @@ public class NonEmptyList<E extends Comparable<E>>
      */
     @Override
     public E tail() {
-        return get(Integer.MAX_VALUE);
+        try {
+            return next.tail();
+        } catch (EmptyListException ele) {
+            return element;
+        }
     }
 
     /**
@@ -214,7 +218,11 @@ public class NonEmptyList<E extends Comparable<E>>
      */
     @Override
     public boolean contains(E element) {
-        return false;
+        if (this.element.compareTo(element) == 0) {
+            return true;
+        } else {
+            return next.contains(element);
+        }
     }
 
     /**
@@ -226,7 +234,7 @@ public class NonEmptyList<E extends Comparable<E>>
      */
     @Override
     public boolean isEmpty() {
-        return true;
+        return false;
     }
 
     /**
@@ -255,4 +263,17 @@ public class NonEmptyList<E extends Comparable<E>>
         return EmptyList.getInstance();
     }
 
+    /**
+     * Provides a {@code String} representation to the whole
+     * {@code PolymorphicList} object, such that it prints out all the elements
+     * current stored in it using the following format:
+     * <blockquote>{@code a1 a2 a3 a4 ... an}</blockquote>
+     *
+     * @return a {@code String} consisting of all the elements currently
+     * stored in the {@code PolymorphicList}
+     */
+    @Override
+    public String toString() {
+        return (element + " " + next.toString()).trim();
+    }
 }

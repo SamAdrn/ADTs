@@ -18,7 +18,7 @@ class LinkedListTest {
     @Test
     public void test1() {
         // 1, 3, 9, 4, 5, 2, 10, 8, 6, 7
-        LinkedList<Integer> linkedList = TestData.defaultList1();
+        LinkedList<Integer> linkedList = TestData.singlyList1();
         List<Integer> list = Arrays.asList(1, 3, 9, 4, 5, 2, 10, 8, 6, 7);
         Assertions.assertEquals(10, linkedList.size());
         for (int i = 0; i < linkedList.size(); i++) {
@@ -33,7 +33,7 @@ class LinkedListTest {
     @Test
     public void test2() {
         // 1, 3, 9, 4, 5, 2, 10, 8, 6, 7
-        LinkedList<Integer> linkedList1 = TestData.defaultList1();
+        LinkedList<Integer> linkedList1 = TestData.singlyList1();
         LinkedList<Integer> linkedList2 =
                 new SinglyLinkedList<>((SinglyLinkedList<Integer>) linkedList1);
         List<Integer> list = Arrays.asList(1, 3, 9, 4, 5, 2, 10, 8, 6, 7);
@@ -54,7 +54,7 @@ class LinkedListTest {
     @Test
     public void test3() {
         // 1, 3, 9, 4, 5, 2, 10, 8, 6, 7
-        LinkedList<Integer> linkedList = TestData.defaultList1();
+        LinkedList<Integer> linkedList = TestData.singlyList1();
         // adding to the head
         linkedList.add(0, 10);
         // adding to the middle
@@ -75,7 +75,7 @@ class LinkedListTest {
     @Test
     public void test4() {
         // 1, 3, 9, 4, 5, 2, 10, 8, 6, 7
-        LinkedList<Integer> linkedList = TestData.defaultList1();
+        LinkedList<Integer> linkedList = TestData.singlyList1();
         linkedList.addAll(4, Arrays.asList(1, 2, 3, 4));
         List<Integer> list =
                 Arrays.asList(1, 3, 9, 4, 1, 2, 3, 4, 5, 2, 10, 8, 6, 7);
@@ -93,7 +93,7 @@ class LinkedListTest {
     @Test
     public void test5() {
         // 1, 3, 9, 4, 5, 2, 10, 8, 6, 7
-        LinkedList<Integer> linkedList = TestData.defaultList1();
+        LinkedList<Integer> linkedList = TestData.singlyList1();
         // remove an element in the middle
         Assertions.assertEquals(9, linkedList.remove(2));
         // remove the head
@@ -113,7 +113,7 @@ class LinkedListTest {
     @Test
     public void test6() {
         // 1, 3, 9, 4, 5, 2, 10, 8, 6, 7
-        LinkedList<Integer> linkedList = TestData.defaultList1();
+        LinkedList<Integer> linkedList = TestData.singlyList1();
         Object[] removed = linkedList.removeRange(2, 5);
         List<Integer> removedList = Arrays.asList(9, 4, 5, 2);
         for (int i = 0; i < removedList.size(); i++) {
@@ -134,7 +134,7 @@ class LinkedListTest {
     @Test
     public void test7() {
         // 1, 3, 9, 4, 5, 2, 10, 8, 6, 7
-        LinkedList<Integer> linkedList = TestData.defaultList1();
+        LinkedList<Integer> linkedList = TestData.singlyList1();
         Assertions.assertEquals(4, linkedList.set(3, 15));
         List<Integer> list = Arrays.asList(1, 3, 9, 15, 5, 2, 10, 8, 6, 7);
         for (int i = 0; i < list.size(); i++) {
@@ -151,7 +151,7 @@ class LinkedListTest {
     @Test
     public void test8() {
         // 0, 0, 0, 1, 1, 1, 1, 1, 2, 2
-        LinkedList<Integer> linkedList = TestData.defaultList3();
+        LinkedList<Integer> linkedList = TestData.singlyList3();
         // 3rd occurrence of 0
         Assertions.assertEquals(2,
                 linkedList.getNthOccurrenceIndex(0, 3));
@@ -164,7 +164,7 @@ class LinkedListTest {
 
         // switch arrays
         // 0, 10, 9, 8, 10, 9, 0, 8, 8, 9
-        linkedList = TestData.defaultList4();
+        linkedList = TestData.singlyList4();
         // 2nd occurrence of 0
         Assertions.assertEquals(6,
                 linkedList.getNthOccurrenceIndex(0, 2));
@@ -183,7 +183,7 @@ class LinkedListTest {
     @Test
     public void test9() {
         // 0, 0, 0, 1, 1, 1, 1, 1, 2, 2
-        LinkedList<Integer> linkedList = TestData.defaultList3();
+        LinkedList<Integer> linkedList = TestData.singlyList3();
         Assertions.assertEquals(0,
                 linkedList.getNthOccurrence(0, 3));
         Assertions.assertNull(linkedList.getNthOccurrence(0, 4));
@@ -196,7 +196,7 @@ class LinkedListTest {
     @Test
     public void test10() {
         // 0, 0, 0, 1, 1, 1, 1, 1, 2, 2
-        LinkedList<Integer> linkedList = TestData.defaultList3();
+        LinkedList<Integer> linkedList = TestData.singlyList3();
         Assertions.assertEquals(3, linkedList.getOccurrences(0));
         Assertions.assertEquals(5, linkedList.getOccurrences(1));
         Assertions.assertEquals(2, linkedList.getOccurrences(2));
@@ -204,7 +204,7 @@ class LinkedListTest {
 
         // switch arrays
         // 0, 10, 9, 8, 10, 9, 0, 8, 8, 9
-        linkedList = TestData.defaultList4();
+        linkedList = TestData.singlyList4();
         Assertions.assertEquals(2, linkedList.getOccurrences(0));
         Assertions.assertEquals(3, linkedList.getOccurrences(8));
         Assertions.assertEquals(3, linkedList.getOccurrences(9));
@@ -218,7 +218,7 @@ class LinkedListTest {
     @Test
     public void test11() {
         // 0, 10, 9, 8, 10, 9, 0, 8, 8, 9
-        LinkedList<Integer> linkedList = TestData.defaultList4();
+        LinkedList<Integer> linkedList = TestData.singlyList4();
         Assertions.assertEquals(1, linkedList.indexOf(10));
         Assertions.assertEquals(3, linkedList.indexOf(8));
         Assertions.assertEquals(3, linkedList.indexOf(8));
@@ -232,7 +232,7 @@ class LinkedListTest {
     @Test
     public void test12() {
         // 0, 10, 9, 8, 10, 9, 0, 8, 8, 9
-        LinkedList<Integer> linkedList = TestData.defaultList4();
+        LinkedList<Integer> linkedList = TestData.singlyList4();
         Assertions.assertEquals(6, linkedList.lastIndexOf(0));
         Assertions.assertEquals(9, linkedList.lastIndexOf(9));
         Assertions.assertEquals(-1, linkedList.lastIndexOf(2));
@@ -245,7 +245,7 @@ class LinkedListTest {
     @Test
     public void test13() {
         // 0, 10, 9, 8, 10, 9, 0, 8, 8, 9
-        LinkedList<Integer> linkedList = TestData.defaultList4();
+        LinkedList<Integer> linkedList = TestData.singlyList4();
         Assertions.assertTrue(linkedList.contains(8));
         Assertions.assertFalse(linkedList.contains(2));
     }
@@ -273,7 +273,7 @@ class LinkedListTest {
      */
     @Test
     public void test15() {
-        LinkedList<String> linkedList = TestData.defaultList5();
+        LinkedList<String> linkedList = TestData.singlyList5();
         Assertions.assertEquals("[bat elk horse ermine bear wolverine " +
                 "cheetah baboon parrot eland]", linkedList.toString());
     }
@@ -285,7 +285,7 @@ class LinkedListTest {
      */
     @Test
     public void test16() {
-        LinkedList<Integer> linkedList = TestData.defaultList2();
+        LinkedList<Integer> linkedList = TestData.singlyList2();
         Assertions.assertEquals(10, linkedList.size());
         linkedList.clear();
         Assertions.assertEquals(0, linkedList.size());
@@ -296,7 +296,7 @@ class LinkedListTest {
      */
     @Test
     public void test17() {
-        LinkedList<Integer> linkedList = TestData.defaultList2();
+        LinkedList<Integer> linkedList = TestData.singlyList2();
         // tests whether all values returned by next are correct
         Iterator<Integer> itr = linkedList.iterator();
         List<Integer> list =
@@ -328,6 +328,17 @@ class LinkedListTest {
         LinkedList<Integer> linkedList = new SinglyLinkedList<>();
         linkedList.add(null);
         Assertions.assertTrue(linkedList.contains(null));
+    }
+
+    @Test
+    public void randomTest() {
+        DoublyLinkedList<Integer> linkedList = new DoublyLinkedList<>();
+        linkedList.add(0, 2);
+        linkedList.add(0, 0);
+        linkedList.add(1, 1);
+        linkedList.add(3, 4);
+        linkedList.add(3, 3);
+        linkedList.addAll(0, Arrays.asList(4, 5, 6, 7, 8));
     }
 
 }

@@ -1,5 +1,7 @@
 package list.arraylist;
 
+import java.util.Collection;
+
 /**
  * This class is an implementation of the {@link ComparableArrayList} class.
  * <br><br>
@@ -26,6 +28,7 @@ package list.arraylist;
  * @see ComparableArrayList
  * @see Comparable
  */
+@SuppressWarnings({"unchecked"})
 public class SortedArrayList<E extends Comparable<E>>
         extends ComparableArrayList<E> {
 
@@ -55,7 +58,10 @@ public class SortedArrayList<E extends Comparable<E>>
      * @param cal the other {@code ComparableArrayList} object to be copied
      */
     public SortedArrayList(ComparableArrayList<E> cal) {
-        super(cal);
+        arr = (E[]) new Comparable[cal.size()];
+        for (int i = 0; i < cal.size(); i++) {
+            this.add(cal.get(i));
+        }
     }
 
     /**
@@ -107,14 +113,69 @@ public class SortedArrayList<E extends Comparable<E>>
      * @param element the element to be inserted
      * @return {@code true} to indicate a change has been made to the list
      * @since 1.1
-     * @deprecated adding by index is not supported in a
-     * {@code SortedArrayList}
+     * @deprecated adding by index is not supported in a {@code SortedArrayList}
      */
     @Override
     public boolean add(int index, E element)
             throws UnsupportedOperationException {
         throw new UnsupportedOperationException("adding by index is not " +
                 "supported in a sorted ArrayList");
+    }
+
+    /**
+     * Appends a {@code Collection} of elements to the end of the {@code List}.
+     *
+     * @param c a {@code Collection} containing the elements to be added
+     * @throws NullPointerException if the {@code Collection} of objects
+     *                              specified is {@code null}
+     * @see Collection
+     * @since 1.1
+     */
+    @Override
+    public void addAll(Collection<? extends E> c) {
+        if (c == null) {
+            throw new NullPointerException("Collection is null");
+        }
+        for (E e : c) {
+            this.add(e);
+        }
+    }
+
+    /**
+     * Inserts a {@code Collection} of elements to a position in the
+     * {@code List} specified by {@code index}.
+     *
+     * @param index the index position where the {@code Collection} of
+     *              elements should be inserted
+     * @param c     the {@code Collection} containing elements to be inserted
+     * @throws NullPointerException if the {@code Collection} of objects
+     *                              specified is {@code null}
+     * @see Collection
+     * @since 1.1
+     * @deprecated adding by index is not supported in a {@code SortedArrayList}
+     */
+    @Override
+    public void addAll(int index, Collection<? extends E> c) {
+        throw new UnsupportedOperationException("adding by index is not " +
+                "supported in a sorted ArrayList");
+    }
+
+    /**
+     * Removes the element at the position specified by {@code index} and adds
+     * the new element specified in {@code newElement}.
+     *
+     * @param index      the index position of the element to be replaced
+     * @param newElement the new element to replace the old element
+     * @return the element that had just been replaced
+     * @throws IndexOutOfBoundsException if an invalid {@code index} has
+     *                                   been specified
+     * @since 1.1
+     */
+    @Override
+    public E set(int index, E newElement) {
+        E e = remove(index);
+        add(newElement);
+        return e;
     }
 
     /**

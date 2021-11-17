@@ -6,7 +6,7 @@ import java.util.Objects;
 /**
  * This class is an implementation of the {@link Stack} interface.
  * <br><br>
- * The {code DefaultStack} class uses an array to represent a stack. Every time
+ * The {code ArrayStack} class uses an array to represent a stack. Every time
  * an element is pushed onto the stack, the element will be added to the slot
  * after the last element of the array. Popping and retrieving the top of the
  * stack works in a similar fashion.
@@ -48,6 +48,25 @@ public class ArrayStack<E> implements Stack<E> {
      */
     public ArrayStack() {
         stack = (E[]) new Object[MAXIMUM_CAPACITY];
+        size = 0;
+    }
+
+    /**
+     * Constructor. Initializes the array to be used as the stack with the
+     * specified capacity.
+     * <br><br>
+     * If {@code capacity} is less than {@code 1}, then the array initialized
+     * will be set to its default capacity, {@code 1000}.
+     *
+     * @param capacity the capacity of the array when initialized
+     */
+    public ArrayStack(int capacity) {
+        if (capacity < 1) {
+            stack = (E[]) new Object[MAXIMUM_CAPACITY];
+        } else {
+            stack = (E[]) new Object[capacity];
+        }
+        size = 0;
     }
 
     /**

@@ -225,18 +225,6 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
     }
 
     /**
-     * Clears the {@code LinkedList} such that it is empty and ready to be
-     * used again.
-     *
-     * @since 1.1
-     */
-    @Override
-    public void clear() {
-        head = null;
-        size = 0;
-    }
-
-    /**
      * Replaces the element at the position specified by {@code index}
      * with {@code newElement}.
      *
@@ -446,6 +434,18 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
             cur = cur.next;
         }
         return str.append(cur.element).append("]").toString();
+    }
+
+    /**
+     * Clears the {@code LinkedList} such that it is empty and ready to be
+     * used again.
+     *
+     * @since 1.1
+     */
+    @Override
+    public void clear() {
+        head = null;
+        size = 0;
     }
 
     /**

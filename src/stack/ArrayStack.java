@@ -29,9 +29,14 @@ import java.util.Objects;
 public class ArrayStack<E> implements Stack<E> {
 
     /**
+     * The default maximum capacity the array can handle.
+     */
+    private final int MAXIMUM_CAPACITY = 1000;
+
+    /**
      * An array used to represent the stack.
      */
-    private final E[] stack;
+    private E[] stack;
 
     /**
      * A field to keep the number of elements in the stack.
@@ -42,17 +47,22 @@ public class ArrayStack<E> implements Stack<E> {
      * Default Constructor. Initializes the array to be used as the stack.
      */
     public ArrayStack() {
-        stack = (E[]) new Object[1000];
+        stack = (E[]) new Object[MAXIMUM_CAPACITY];
     }
 
     /**
      * Pushes the element {@code e} to the top of the stack.
      *
      * @param e the element to be pushed into the stack
+     * @throws IllegalStateException if the array being used as the stack is at
+     *                               full capacity
      * @since 1.1
      */
     @Override
     public void push(E e) {
+        if (stack.length == size) {
+            throw new IllegalStateException("array is fully filled");
+        }
         stack[size] = e;
         size++;
     }
@@ -137,5 +147,17 @@ public class ArrayStack<E> implements Stack<E> {
             }
         }
         return -1;
+    }
+
+    /**
+     * Clears the {@code Stack} such that it is empty and ready to be
+     * used again.
+     *
+     * @since 1.1
+     */
+    @Override
+    public void clear() {
+        stack = (E[]) new Object[MAXIMUM_CAPACITY];
+        size = 0;
     }
 }

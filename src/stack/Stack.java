@@ -9,6 +9,10 @@ import java.util.EmptyStackException;
  * first-out) principle. A great analogy of a stack would be a stack of plates,
  * in which elements can only be inserted to the top-most position of the
  * stack, and only the element at the top-most position can be removed.
+ * <br><br>
+ * Stacks also allows {@code null} elements. The stack's {@link #search(Object)}
+ * method relies on the {@link java.util.Objects#equals(Object)
+ * Objects.equals(a, b)} method.
  *
  * @author Samuel Adrian Kosasih
  *
@@ -73,5 +77,13 @@ public interface Stack<E> {
      * @since 1.1
      */
     int search(E e) throws EmptyStackException;
+
+    /**
+     * Clears the {@code Stack} such that it is empty and ready to be used
+     * again.
+     *
+     * @since 1.1
+     */
+    void clear();
 
 }

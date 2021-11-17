@@ -32,7 +32,7 @@ public class LinkedStack<E> implements Stack<E> {
     /**
      * The reference to the stack
      */
-    SinglyLinkedList<E> stack;
+    private final SinglyLinkedList<E> stack;
 
     /**
      * Default Constructor. Initializes the stack being used in this object.
@@ -123,5 +123,16 @@ public class LinkedStack<E> implements Stack<E> {
             throw new EmptyStackException();
         }
         return stack.indexOf(e);
+    }
+
+    /**
+     * Clears the {@code Stack} such that it is empty and ready to be
+     * used again.
+     *
+     * @since 1.1
+     */
+    @Override
+    public void clear() {
+        stack.clear();
     }
 }

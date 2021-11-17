@@ -7,7 +7,7 @@ import java.util.EmptyStackException;
 /**
  * This class is an implementation of the {@link Stack} interface.
  * <br><br>
- * The {code DefaultStack} class uses a {@link SinglyLinkedList} to represent
+ * The {code LinkedStack} class uses a {@link SinglyLinkedList} to represent
  * a stack. Every time an element is pushed onto the stack, the element will be
  * added to the {@link SinglyLinkedList#head head} of the list, in other words
  * the top of the stack. Popping and retrieving the top of the stack works in a

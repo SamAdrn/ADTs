@@ -6,6 +6,11 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Provides tests for the implementations of the {@link Queue}.
+ *
+ * @author Samuel Adrian Kosasih
+ */
 class QueueTest {
 
     // Tests the general enqueueing and dequeueing functionality of ArrayQueue

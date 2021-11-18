@@ -7,6 +7,11 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * Provides tests for the implementations of the {@link LinkedList}.
+ *
+ * @author Samuel Adrian Kosasih
+ */
 class LinkedListTest {
 
     // Tests the general adding functionality of SinglyLinkedList
@@ -145,8 +150,8 @@ class LinkedListTest {
     // Tests the general get functionality of SinglyLinkedList
 
     /**
-     * Tests getting the index of the <code>n</code>th occurrence of
-     * <code>element</code> in a {@link SinglyLinkedList} object.
+     * Tests getting the index of the {@code n}th occurrence of
+     * {@code element} in a {@link SinglyLinkedList} object.
      */
     @Test
     public void test8() {
@@ -177,7 +182,7 @@ class LinkedListTest {
     }
 
     /**
-     * Tests retrieving the <code>n</code>th occurrence of <code>element</code>
+     * Tests retrieving the {@code n}th occurrence of {@code element}
      * in a {@link SinglyLinkedList} object.
      */
     @Test
@@ -190,7 +195,7 @@ class LinkedListTest {
     }
 
     /**
-     * Tests retrieving the number of occurrences of <code>element</code>
+     * Tests retrieving the number of occurrences of {@code element}
      * in a {@link SinglyLinkedList} object.
      */
     @Test
@@ -213,7 +218,7 @@ class LinkedListTest {
 
     /**
      * Tests retrieving the index of the first occurrence of
-     * <code>element</code> in a {@link SinglyLinkedList} object.
+     * {@code element} in a {@link SinglyLinkedList} object.
      */
     @Test
     public void test11() {
@@ -227,7 +232,7 @@ class LinkedListTest {
 
     /**
      * Tests retrieving the index of the last occurrence of
-     * <code>element</code> in a {@link SinglyLinkedList} object.
+     * {@code element} in a {@link SinglyLinkedList} object.
      */
     @Test
     public void test12() {
@@ -239,7 +244,7 @@ class LinkedListTest {
     }
 
     /**
-     * Tests indicating whether an <code>element</code> exists in a
+     * Tests indicating whether an {@code element} exists in a
      * {@link SinglyLinkedList} object.
      */
     @Test
@@ -472,8 +477,8 @@ class LinkedListTest {
     // Tests the general get functionality of SinglyLinkedList
 
     /**
-     * Tests getting the index of the <code>n</code>th occurrence of
-     * <code>element</code> in a {@link SinglyLinkedList} object.
+     * Tests getting the index of the {@code n}th occurrence of
+     * {@code element} in a {@link SinglyLinkedList} object.
      */
     @Test
     public void test26() {
@@ -504,7 +509,7 @@ class LinkedListTest {
     }
 
     /**
-     * Tests retrieving the <code>n</code>th occurrence of <code>element</code>
+     * Tests retrieving the {@code n}th occurrence of {@code element}
      * in a {@link DoublyLinkedList} object.
      */
     @Test
@@ -517,7 +522,7 @@ class LinkedListTest {
     }
 
     /**
-     * Tests retrieving the number of occurrences of <code>element</code>
+     * Tests retrieving the number of occurrences of {@code element}
      * in a {@link DoublyLinkedList} object.
      */
     @Test
@@ -540,7 +545,7 @@ class LinkedListTest {
 
     /**
      * Tests retrieving the index of the first occurrence of
-     * <code>element</code> in a {@link DoublyLinkedList} object.
+     * {@code element} in a {@link DoublyLinkedList} object.
      */
     @Test
     public void test29() {
@@ -554,7 +559,7 @@ class LinkedListTest {
 
     /**
      * Tests retrieving the index of the last occurrence of
-     * <code>element</code> in a {@link DoublyLinkedList} object.
+     * {@code element} in a {@link DoublyLinkedList} object.
      */
     @Test
     public void test30() {
@@ -566,7 +571,7 @@ class LinkedListTest {
     }
 
     /**
-     * Tests indicating whether an <code>element</code> exists in a
+     * Tests indicating whether an {@code element} exists in a
      * {@link DoublyLinkedList} object.
      */
     @Test

@@ -6,6 +6,11 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Provides tests for the implementations of the {@link PolymorphicList}.
+ *
+ * @author Samuel Adrian Kosasih
+ */
 class PolymorphicListTest {
 
     // Tests the general adding functionality of PolymorphicList

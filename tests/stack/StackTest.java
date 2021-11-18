@@ -6,6 +6,11 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Provides tests for the implementations of the {@link Stack}.
+ *
+ * @author Samuel Adrian Kosasih
+ */
 class StackTest {
 
     // Tests the general push and pop functionality of ArrayStack

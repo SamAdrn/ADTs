@@ -7,6 +7,11 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * Provides tests for the implementations of the {@link ArrayList}.
+ *
+ * @author Samuel Adrian Kosasih
+ */
 class ArrayListTest {
 
     // Tests the general adding functionality of DefaultArrayList
@@ -145,8 +150,8 @@ class ArrayListTest {
     // Tests the general get functionality of DefaultArrayList
 
     /**
-     * Tests getting the index of the <code>n</code>th occurrence of
-     * <code>element</code> in a {@link DefaultArrayList} object.
+     * Tests getting the index of the {@code n}th occurrence of
+     * {@code element} in a {@link DefaultArrayList} object.
      */
     @Test
     public void test8() {
@@ -177,7 +182,7 @@ class ArrayListTest {
     }
 
     /**
-     * Tests retrieving the <code>n</code>th occurrence of <code>element</code>
+     * Tests retrieving the {@code n}th occurrence of {@code element}
      * in a {@link DefaultArrayList} object.
      */
     @Test
@@ -190,7 +195,7 @@ class ArrayListTest {
     }
 
     /**
-     * Tests retrieving the number of occurrences of <code>element</code>
+     * Tests retrieving the number of occurrences of {@code element}
      * in a {@link DefaultArrayList} object.
      */
     @Test
@@ -213,7 +218,7 @@ class ArrayListTest {
 
     /**
      * Tests retrieving the index of the first occurrence of
-     * <code>element</code> in a {@link DefaultArrayList} object.
+     * {@code element} in a {@link DefaultArrayList} object.
      */
     @Test
     public void test11() {
@@ -226,7 +231,7 @@ class ArrayListTest {
 
     /**
      * Tests retrieving the index of the last occurrence of
-     * <code>element</code> in a {@link DefaultArrayList} object.
+     * {@code element} in a {@link DefaultArrayList} object.
      */
     @Test
     public void test12() {
@@ -238,7 +243,7 @@ class ArrayListTest {
     }
 
     /**
-     * Tests indicating whether an <code>element</code> exists in a
+     * Tests indicating whether an {@code element} exists in a
      * {@link DefaultArrayList} object.
      */
     @Test
@@ -449,8 +454,8 @@ class ArrayListTest {
     // Tests the general get functionality of SortedArrayList
 
     /**
-     * Tests getting the index of the <code>n</code>th occurrence of
-     * <code>element</code> in a {@link SortedArrayList} object.
+     * Tests getting the index of the {@code n}th occurrence of
+     * {@code element} in a {@link SortedArrayList} object.
      */
     @Test
     public void test25() {
@@ -481,7 +486,7 @@ class ArrayListTest {
     }
 
     /**
-     * Tests retrieving the <code>n</code>th occurrence of <code>element</code>
+     * Tests retrieving the {@code n}th occurrence of {@code element}
      * in a {@link SortedArrayList} object.
      */
     @Test
@@ -494,7 +499,7 @@ class ArrayListTest {
     }
 
     /**
-     * Tests retrieving the number of occurrences of <code>element</code>
+     * Tests retrieving the number of occurrences of {@code element}
      * in a {@link SortedArrayList} object.
      */
     @Test
@@ -517,7 +522,7 @@ class ArrayListTest {
 
     /**
      * Tests retrieving the index of the first occurrence of
-     * <code>element</code> in a {@link SortedArrayList} object.
+     * {@code element} in a {@link SortedArrayList} object.
      */
     @Test
     public void test28() {
@@ -530,7 +535,7 @@ class ArrayListTest {
 
     /**
      * Tests retrieving the index of the last occurrence of
-     * <code>element</code> in a {@link SortedArrayList} object.
+     * {@code element} in a {@link SortedArrayList} object.
      */
     @Test
     public void test29() {
@@ -542,7 +547,7 @@ class ArrayListTest {
     }
 
     /**
-     * Tests indicating whether an <code>element</code> exists in a
+     * Tests indicating whether an {@code element} exists in a
      * {@link SortedArrayList} object.
      */
     @Test

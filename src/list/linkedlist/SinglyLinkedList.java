@@ -67,7 +67,7 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
     }
 
     /**
-     * Default Constructor. Initializes a starting array of capacity {@code 10}.
+     * Default Constructor. Initializes the head of the {@code LinkedList}.
      */
     public SinglyLinkedList() {
         head = null;
@@ -78,7 +78,7 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
      * Copy Constructor. Takes in another {@code LinkedList} object
      * and creates a deep copy of it.
      *
-     * @param sll the other {@code SinglyLinkedList} object to be copied
+     * @param sll the other {@code LinkedList} object to be copied
      */
     public SinglyLinkedList(LinkedList<E> sll) {
         this.addAll(Arrays.asList(sll.toArray()));

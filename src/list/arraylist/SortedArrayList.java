@@ -4,17 +4,17 @@ import java.util.Collection;
 
 /**
  * This class is an implementation of the {@link ComparableArrayList} class.
- * <br><br>
- * In a {@code SortedArrayList}, elements are ordered based on their comparison
- * values, obtained from the {@link Comparable#compareTo(Object)
+ *
+ * <p> In a {@code SortedArrayList}, elements are ordered based on their
+ * comparison values, obtained from the {@link Comparable#compareTo(Object)
  * compareTo(Object)} method in the {@link Comparable} interface. For example,
  * if the {@code Collection} of elements : {@code [3, 2, 1, 4, ...]} is inserted
  * to the {@code SortedArrayList}, it will store it as
  * <blockquote>{@code [1, 2, 3, 4, ...]}<br>with ascending order as specified by
  * the {@link Integer#compareTo(Integer) compareTo(Integer)} method
  * in the {@link Integer} class.</blockquote>
- * <br><br>
- * Since this {@code ArrayList} must maintain a certain specific order of
+ *
+ * <p> Since this {@code ArrayList} must maintain a certain specific order of
  * elements throughout its lifespan, it will no longer accept {@code null}
  * elements. There is no valid rule on where {@code null} objects should be
  * kept. Furthermore, this class will not support the
@@ -67,10 +67,9 @@ public class SortedArrayList<E extends Comparable<E>>
     /**
      * Inserts {@code element} to the appropriate position of the
      * {@code SortedArrayList}.
-     * <br><br>
-     * Due to constraints of the {@code SortedArrayList}, this method
-     * will return {@code false} if it takes in a {@code null}
-     * element.
+     *
+     * <p> Due to constraints of the {@code SortedArrayList}, this method will
+     * return {@code false} if it takes in a {@code null} element.
      *
      * @param element the element to be inserted into the list
      * @return {@code true} if {@code element} is successfully added to the
@@ -193,8 +192,8 @@ public class SortedArrayList<E extends Comparable<E>>
 
     /**
      * Retrieves the index of {@code element} in the {@code ArrayList}.
-     * <br><br>
-     * If duplicate elements exist, then this method will return the index
+     *
+     * <p> If duplicate elements exist, then this method will return the index
      * of any of the occurrences of element. The point of this method is to
      * be a more efficient alternative to {@link #indexOf(Comparable)} for the
      * {@link #contains(Comparable)} method by using the binary search

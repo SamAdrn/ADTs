@@ -2,8 +2,8 @@ package list.arraylist;
 
 /**
  * This class is the default implementation of the {@link ArrayList} interface.
- * <br><br>
- * The insertion order in a {@code DefaultArrayList} is maintained until a
+ *
+ * <p> The insertion order in a {@code DefaultArrayList} is maintained until a
  * change is made by the user through the {@link #set(int, Object)} method.
  * For example, if the {@code Collection} of elements : {@code [a1, a2, a3, ...,
  * an]} is inserted to the {@code DefaultArrayList}, it will store it as
@@ -87,8 +87,8 @@ public class DefaultArrayList<E> extends AbstractArrayList<E> {
      * Retrieves the {@code n}th occurrence of {@code element} within the
      * {@code ArrayList}. If there is less than {@code n} occurrences of the
      * specified element, then this method will return @code null}.
-     * <br><br>
-     * Equal elements are tested using the following logic
+     *
+     * <p> Equal elements are tested using the following logic
      * {@code (o == null ? e == null : o.equals(e))}
      *
      * @param element the element to be searched for
@@ -115,8 +115,8 @@ public class DefaultArrayList<E> extends AbstractArrayList<E> {
      * Retrieves the index of the {@code n}th occurrence of {@code element}
      * within the {@code ArrayList}. If there is less than {@code n} occurrences
      * of the specified element, then this method will return {@code -1}.
-     * <br><br>
-     * Equal elements are tested using the following logic
+     *
+     * <p> Equal elements are tested using the following logic
      * {@code (o == null ? e == null : o.equals(e))}
      *
      * @param element the element to be searched for
@@ -145,8 +145,8 @@ public class DefaultArrayList<E> extends AbstractArrayList<E> {
      * Retrieves the number of times {@code element} occurs in the
      * {@code ArrayList}. If the element does not exist, then this method
      * will return {@code 0}.
-     * <br><br>
-     * Equal elements are tested using the following logic
+     *
+     * <p> Equal elements are tested using the following logic
      * {@code (o == null ? e == null : o.equals(e))}
      *
      * @param element the element to be searched for
@@ -168,8 +168,8 @@ public class DefaultArrayList<E> extends AbstractArrayList<E> {
     /**
      * Retrieves the index of the first occurrence of {@code element} in
      * the {@code ArrayList}.
-     * <br><br>
-     * Equal elements are tested using the following logic
+     *
+     * <p> Equal elements are tested using the following logic
      * {@code (o == null ? e == null : o.equals(e))}
      *
      * @param element the element to be searched for
@@ -190,8 +190,8 @@ public class DefaultArrayList<E> extends AbstractArrayList<E> {
      * Retrieves the index of the last occurrence of {@code element} in the
      * {@code ArrayList}. This means that the index returned will be the
      * position of {@code element} furthest away from index {@code 0}.
-     * <br><br>
-     * Equal elements are tested using the following logic
+     *
+     * <p> Equal elements are tested using the following logic
      * {@code (o == null ? e == null : o.equals(e))}
      *
      * @param element the element to be searched for
@@ -244,8 +244,8 @@ public class DefaultArrayList<E> extends AbstractArrayList<E> {
      * Increases the capacity of the array being used by the {@code ArrayList}
      * to be able to store {@code n} number of elements specified by
      * {@code newSize}.
-     * <br><br>
-     * Note that this method does not offer the functionality to reduce the
+     *
+     * <p> Note that this method does not offer the functionality to reduce the
      * capacity of the array.
      *
      * @param newSize the new and bigger capacity for the array

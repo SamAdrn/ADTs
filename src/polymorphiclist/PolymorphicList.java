@@ -3,36 +3,36 @@ package polymorphiclist;
 /**
  * This class represents the root interface of all {@code PolymorphicList}
  * objects.
- * <br><br>
- * A polymorphic polymorphic list is a type of linked polymorphic list that
+ *
+ * <p> A polymorphic polymorphic list is a type of linked polymorphic list that
  * relies on two different nodes, one with an element and one without.
  * Furthermore, a polymorphic polymorphic list is instantiated with a
  * {@code PolymorphicList} node instead of a whole
  * {@link list.linkedlist.LinkedList LinkedList} structure. These types of lists
  * rely on recursion to perform its operations, since traversals take place
  * across different instances of their nodes.
- * <br><br>
- * Polymorphic lists also support indexing. However, since it does not maintain
- * a {@code size} variable amongst its nodes, indices greater than the number of
- * elements the polymorphic list contains is valid. For example, iterating the
- * polymorphic list to index {@code 10} with only {@code 5} elements will simply
- * stop the iteration at the final node, just right before an {@link EmptyList}
- * node. The only exception is that negative indices will throw an
- * {@link IndexOutOfBoundsException}.
- * <br><br>
- * All update methods in {@code PolymorphicList} returns a reference to the
+ *
+ * <p> Polymorphic lists also support indexing. However, since it does not
+ * maintain a {@code size} variable amongst its nodes, indices greater than the
+ * number of elements the polymorphic list contains is valid. For example,
+ * iterating the polymorphic list to index {@code 10} with only {@code 5}
+ * elements will simply stop the iteration at the final node, just right before
+ * an {@link EmptyList} node. The only exception is that negative indices will
+ * throw an {@link IndexOutOfBoundsException}.
+ *
+ * <p> All update methods in {@code PolymorphicList} returns a reference to the
  * head node to ensure the representation of the whole list is maintained. To
  * perform updates, the method's return value must be reassigned to itself in
  * order to make modifications to the list. For example:
  * <blockquote>{@code polyList = polyList.add(10)}</blockquote>
- * <br><br>
- * To instantiate an empty polymorphic list, it's best to call the
+ *
+ * <p> To instantiate an empty polymorphic list, it's best to call the
  * {@link EmptyList#getInstance()} method instead of adding an {@code null}
  * element. For example: <blockquote>{@code PolymorphicList<E> polyList =
  * EmptyList.getInstance()}</blockquote>
- * <br><br>
- * The class is not considered as a {@link list.List List} since it requires a
- * different set of methods and return values. Furthermore, a
+ *
+ * <p> The class is not considered as a {@link list.List List} since it requires
+ * a different set of methods and return values. Furthermore, a
  * {@code PolymorphicList} object should be differentiated from a
  * {@code PolymorphicList}.
  *
@@ -79,8 +79,8 @@ public interface PolymorphicList<E extends Comparable<E>> {
     /**
      * Removes the element at a position in the {@code PolymorphicList}
      * specified by {@code index}.
-     * <br><br>
-     * If the {@code index} is greater than the number of elements in the
+     *
+     * <p> If the {@code index} is greater than the number of elements in the
      * polymorphic list, then the last element would be removed.
      *
      * @param index the index position of the element to be removed

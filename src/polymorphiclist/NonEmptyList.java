@@ -2,8 +2,8 @@ package polymorphiclist;
 
 /**
  * This class represents a non-empty {@link PolymorphicList} node.
- * <br><br>
- * The definition of non-empty simply means that the node has an existing
+ *
+ * <p> The definition of non-empty simply means that the node has an existing
  * element currently stored within it.
  *
  * @param <E> generic type parameter determining the type of object the
@@ -91,8 +91,8 @@ public class NonEmptyList<E extends Comparable<E>>
     /**
      * Removes the element at a position in the {@code PolymorphicList}
      * specified by {@code index}.
-     * <br><br>
-     * If the {@code index} is greater than the number of elements in the
+     *
+     * <p> If the {@code index} is greater than the number of elements in the
      * polymorphic list, then the last element would be removed.
      *
      * @param index the index position of the element to be removed

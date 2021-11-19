@@ -6,14 +6,14 @@ import java.util.EmptyStackException;
 
 /**
  * This class is an implementation of the {@link Stack} interface.
- * <br><br>
- * The {code LinkedStack} class uses a {@link SinglyLinkedList} to represent
+ *
+ * <p> The {code LinkedStack} class uses a {@link SinglyLinkedList} to represent
  * a stack. Every time an element is pushed onto the stack, the element will be
  * added to the {@link SinglyLinkedList#head head} of the list, in other words
  * the top of the stack. Popping and retrieving the top of the stack works in a
  * similar fashion.
- * <br><br>
- * All methods run in the best-case time complexity equivalent to the
+ *
+ * <p> All methods run in the best-case time complexity equivalent to the
  * {@link SinglyLinkedList} class. This is because the stack is based on the
  * head of the list, where the iteration begins. Therefore, all methods run in
  * {@code O(1)} time, with the exception of the {@link #search(Object)} method,
@@ -106,11 +106,11 @@ public class LinkedStack<E> implements Stack<E> {
 
     /**
      * Retrieves the distance of element {@code e} from the top of the stack.
-     * <br><br>
-     * The method will return {@code -1} if {@code e} does not exist.
-     * <br><br>
-     * This method uses the {@link Object#equals(Object)} method to check for
-     * equivalent elements.
+     *
+     * <p> The method will return {@code -1} if {@code e} does not exist.
+     *
+     * <p> This method uses the {@link Object#equals(Object)} method to check
+     * for equivalent elements.
      *
      * @param e the element to be searched
      * @return the distance of {@code e} from the top of the stack

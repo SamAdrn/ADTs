@@ -7,17 +7,17 @@ import java.util.Objects;
 
 /**
  * This class is an implementation of the {@link LinkedList} interface.
- * <br><br>
- * The {@code DoublyLinkedList} uses nodes that store references to its next
+ *
+ * <p> The {@code DoublyLinkedList} uses nodes that store references to its next
  * node and its previous node. This allows traversing in a
  * {@code DoublyLinkedList} to go both ways: from the {@link #head} to the
  * {@link #tail} and vice versa.
- * <br><br>
- * The advantage to this implementation is the reverse traversals. This allows
- * us to delete a node in the list easily since we have access to its previous
- * node.
- * <br><br>
- * The insertion order in a {@code DoublyLinkedList} is maintained until a
+ *
+ * <p> The advantage to this implementation is the reverse traversals. This
+ * allows us to delete a node in the list easily since we have access to its
+ * previous node.
+ *
+ * <p> The insertion order in a {@code DoublyLinkedList} is maintained until a
  * change is made by the user through the {@link #set(int, Object)} method.
  * For example, if the {@code Collection} of elements : {@code [a1, a2, a3, ...,
  * an]} is inserted to the {@code SinglyLinkedList}, it will store it as
@@ -46,10 +46,10 @@ public class DoublyLinkedList<E> extends AbstractLinkedList<E> {
 
     /**
      * This private inner class defines a node to be used for storing elements
-     * in a {@code LinkedList}.
+     * in a {@code DoublyLinkedList}.
      *
      * @param <E> generic type parameter determining the type of object the
-     *            {@code LinkedList} would store.
+     *            {@code DoublyLinkedList} would store.
      */
     private static class Node<E> {
 
@@ -76,6 +76,7 @@ public class DoublyLinkedList<E> extends AbstractLinkedList<E> {
         private Node(E e) {
             element = e;
             next = null;
+            prev = null;
         }
 
     }

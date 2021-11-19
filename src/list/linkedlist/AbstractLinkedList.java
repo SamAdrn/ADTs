@@ -6,12 +6,10 @@ import list.AbstractList;
  * This abstract class provides a skeletal implementation to the
  * {@link LinkedList} interface, outlining the methods and fields that would
  * have similar behaviors across various abstractions.
- * <br><br>
- * Furthermore, this class defines most of the operational functionalities of
- * a {@code LinkedList}. However, it may need to be overridden for certain
+ *
+ * <p> Furthermore, this class defines most of the operational functionalities
+ * of a {@code LinkedList}. However, it may need to be overridden for certain
  * implementations, such as the {@code DoublyLinkedList}.
- * <br><br>
- * Some behaviors are already defined in the {@link AbstractList} class.
  *
  * @param <E> generic type parameter determining the type of object the
  *            {@code LinkedList} would store.

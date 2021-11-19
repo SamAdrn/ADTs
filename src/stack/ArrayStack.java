@@ -5,18 +5,19 @@ import java.util.Objects;
 
 /**
  * This class is an implementation of the {@link Stack} interface.
- * <br><br>
- * The {code ArrayStack} class uses an array to represent a stack. Every time
- * an element is pushed onto the stack, the element will be added to the slot
- * after the last element of the array. Popping and retrieving the top of the
- * stack works in a similar fashion.
- * <br><br>
- * All methods run {@code O(1)} time, similar to the time complexity of updating
- * an array. Therefore, all methods run in {@code O(1)} time, with the exception
- * of the {@link #search(Object)} method, which depends on the position of the
- * element to be searched. However, an array-based representation limits the
- * capacity of elements that can be added to the stack. In the current
- * implementation, the capacity of the array is set to {@code 1000}.
+ *
+ * <p> The {code ArrayStack} class uses an array to represent a stack. Every
+ * time an element is pushed onto the stack, the element will be added to the
+ * slot after the last element of the array. Popping and retrieving the top of
+ * the stack works in a similar fashion.
+ *
+ * <p> All methods run {@code O(1)} time, similar to the time complexity of
+ * updating an array. Therefore, all methods run in {@code O(1)} time, with the
+ * exception of the {@link #search(Object)} method, which depends on the
+ * position of the element to be searched. However, an array-based
+ * representation limits the capacity of elements that can be added to the
+ * stack. In the current implementation, the capacity of the array is set to
+ * {@code 1000}.
  *
  * @author Samuel Adrian Kosasih
  *
@@ -54,9 +55,9 @@ public class ArrayStack<E> implements Stack<E> {
     /**
      * Constructor. Initializes the array to be used as the stack with the
      * specified capacity.
-     * <br><br>
-     * If {@code capacity} is less than {@code 1}, then the array initialized
-     * will be set to its default capacity, {@code 1000}.
+     *
+     * <p> If {@code capacity} is less than {@code 1}, then the array
+     * initialized will be set to its default capacity, {@code 1000}.
      *
      * @param capacity the capacity of the array when initialized
      */
@@ -143,12 +144,12 @@ public class ArrayStack<E> implements Stack<E> {
 
     /**
      * Retrieves the distance of element {@code e} from the top of the stack.
-     * <br><br>
-     * The method will return {@code -1} if the stack is empty, or {@code e}
+     *
+     * <p> The method will return {@code -1} if the stack is empty, or {@code e}
      * does not exist.
-     * <br><br>
-     * This method uses the {@link Object#equals(Object)} method to check for
-     * equivalent elements.
+     *
+     * <p> This method uses the {@link Object#equals(Object)} method to check
+     * for equivalent elements.
      *
      * @param e the element to be searched
      * @return the distance of {@code e} from the top of the stack

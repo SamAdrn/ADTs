@@ -2,21 +2,21 @@ package queue;
 
 /**
  * This interface represents the root interface of all {@code Queue} objects.
- * <br><br>
- * A {@code Queue} is a type of data structure that follows the LIFO (last-in
- * first-out) principle. A great analogy of a {@code Queue} would be a normal
- * line in a offee shop, in which customers entering the {@code Queue} first
- * would leave the earliest. This works the same way for the {@code Queue} data
- * structure. Elements last in would be the first out.
- * <br><br>
- * With that being explained, elements would always be added (i.e., enqueued)
- * to the tail of the {@code Queue}, and they would always be removed
- * (i.e., dequeued) from the head of the {@code Queue}. Retrieving elements also
- * work the same way as removals, with the exception of the element being
- * removed.
- * <br><br>
- * There are two versions of certain methods in a {@code Queue} which differs
- * in the return values when operations fail. For example, the {@link
+ *
+ * <p> A {@code Queue} is a type of data structure that follows the LIFO
+ * (last-in first-out) principle. A great analogy of a {@code Queue} would be a
+ * normal line in a offee shop, in which customers entering the {@code Queue}
+ * first would leave the earliest. This works the same way for the {@code Queue}
+ * data structure. Elements last in would be the first out.
+ *
+ * <p> With that being explained, elements would always be added
+ * (i.e., enqueued) to the tail of the {@code Queue}, and they would always be
+ * removed (i.e., dequeued) from the head of the {@code Queue}. Retrieving
+ * elements also work the same way as removals, with the exception of the
+ * element being removed.
+ *
+ * <p> There are two versions of certain methods in a {@code Queue} which
+ * differs in the return values when operations fail. For example, the {@link
  * #add(Object) add(e)} method will throw an exception if any circumstances
  * prevent the operation from succeeding. The following is a summary of methods
  * in this {@code Queue} class. {@link java.util.Queue}

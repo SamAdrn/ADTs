@@ -2,13 +2,13 @@ package list.arraylist;
 
 /**
  * This class is an implementation of the {@link ArrayList} interface.
- * <br><br>
- * This {@code ArrayList} is intended to be used for objects that implement
+ *
+ * <p> This {@code ArrayList} is intended to be used for objects that implement
  * the {@link Comparable} interface, providing means for two object to compare
  * themselves with one another through the {@link Comparable#compareTo(Object)
  * compareTo(Object)} method.
- * <br><br>
- * The insertion order in a {@code ComparableArrayList} is maintained until a
+ *
+ * <p> he insertion order in a {@code ComparableArrayList} is maintained until a
  * change is made by the user through the {@link #set(int, Comparable)} method.
  * For example, if the {@code Collection} of elements : {@code [a1, a2, a3, ...,
  * an]} is inserted to the {@code ComparableArrayList}, it will store it as
@@ -94,8 +94,8 @@ public class ComparableArrayList<E extends Comparable<E>> extends
      * Retrieves the {@code n}th occurrence of {@code element} within the
      * {@code ArrayList}. If there is less than {@code n} occurrences of the
      * specified element, then this method will return {@code null}.
-     * <br><br>
-     * Equal elements are tested using the following logic
+     *
+     * <p> Equal elements are tested using the following logic
      * {@code (o == null ? e == null : o.compareTo(e))}
      *
      * @param element the element to be searched for
@@ -123,8 +123,8 @@ public class ComparableArrayList<E extends Comparable<E>> extends
      * Retrieves the index of the {@code n}th occurrence of {@code element}
      * within the {@code ArrayList}. If there is less than {@code n} occurrences
      * of the specified element, then this method will return {@code -1}.
-     * <br><br>
-     * Equal elements are tested using the following logic
+     *
+     * <p> Equal elements are tested using the following logic
      * {@code (o == null ? e == null : o.compareTo(e))}
      *
      * @param element the element to be searched for
@@ -154,8 +154,8 @@ public class ComparableArrayList<E extends Comparable<E>> extends
      * Retrieves the number of times {@code element} occurs in the
      * {@code ArrayList}. If the element does not exist, then this method
      * will return {@code 0}.
-     * <br><br>
-     * Equal elements are tested using the following logic
+     *
+     * <p> Equal elements are tested using the following logic
      * {@code (o == null ? e == null : o.compareTo(e))}
      *
      * @param element the element to be searched for
@@ -178,8 +178,8 @@ public class ComparableArrayList<E extends Comparable<E>> extends
     /**
      * Retrieves the index of the first occurrence of {@code element} in
      * the {@code ArrayList}.
-     * <br><br>
-     * Equal elements are tested using the following logic
+     *
+     * <p> Equal elements are tested using the following logic
      * {@code (o == null ? e == null : o.compareTo(e))}
      *
      * @param element the element to be searched for
@@ -201,8 +201,8 @@ public class ComparableArrayList<E extends Comparable<E>> extends
      * Retrieves the index of the last occurrence of {@code element} in the
      * {@code ArrayList}. This means that the index returned will be the
      * position of {@code element} furthest away from index {@code 0}.
-     * <br><br>
-     * Equal elements are tested using the following logic
+     *
+     * <p> Equal elements are tested using the following logic
      * {@code (o == null ? e == null : o.compareTo(e))}
      *
      * @param element the element to be searched for
@@ -256,8 +256,8 @@ public class ComparableArrayList<E extends Comparable<E>> extends
      * Increases the capacity of the array being used by the {@code ArrayList}
      * to be able to store {@code n} number of elements specified by
      * {@code newSize}.
-     * <br><br>
-     * Note that this method does not offer the functionality to reduce the
+     *
+     * <p> Note that this method does not offer the functionality to reduce the
      * capacity of the array.
      *
      * @param newSize the new and bigger capacity for the array

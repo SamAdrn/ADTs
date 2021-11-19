@@ -5,9 +5,9 @@ import java.util.Objects;
 
 /**
  * This class is an implementation of the {@link Queue} interface.
- * <br><br>
- * The {code ArrayQueue} class uses an array to represent a queue. It relies on
- * an arbitrary pointer that shows the index position of where the element
+ *
+ * <p> The {code ArrayQueue} class uses an array to represent a queue. It relies
+ * on an arbitrary pointer that shows the index position of where the element
  * should be inserted. This is so the array can be used circularly and the
  * capacity of the array can be maximized. Here is how the pointer is used when
  * enqueueing an element with an array called {@code queue}:
@@ -19,13 +19,13 @@ import java.util.Objects;
  * always be space at the front of the array, unless the array reaches full
  * capacity. Since the pointer always points to the head of the queue, then
  * the position of the element to be dequeued or retrieved is always known.
- * <br><br>
- * All methods run {@code O(1)} time, similar to the time complexity of updating
- * an array. Therefore, all methods run in {@code O(1)} time, with the exception
- * of the {@link #contains(Object)} method, which depends on the position of the
- * element to be searched.
- * <br><br>
- * An array-based representation limits the capacity of elements that can be
+ *
+ * <p> All methods run {@code O(1)} time, similar to the time complexity of
+ * updating an array. Therefore, all methods run in {@code O(1)} time, with the
+ * exception of the {@link #contains(Object)} method, which depends on the
+ * position of the element to be searched.
+ *
+ * <p> An array-based representation limits the capacity of elements that can be
  * added to the stack. In the current implementation, the capacity of the array
  * is set to {@code 1000}.
  *
@@ -72,9 +72,9 @@ public class ArrayQueue<E> implements Queue<E> {
     /**
      * Constructor. Initializes the array to be used as the queue with the
      * specified capacity.
-     * <br><br>
-     * If {@code capacity} is less than {@code 1}, then the array initialized
-     * will be set to its default capacity, {@code 1000}.
+     *
+     * <p> If {@code capacity} is less than {@code 1}, then the array
+     * initialized will be set to its default capacity, {@code 1000}.
      *
      * @param capacity the capacity of the array when initialized
      */

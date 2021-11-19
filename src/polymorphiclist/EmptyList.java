@@ -2,12 +2,12 @@ package polymorphiclist;
 
 /**
  * This class represents a empty {@link PolymorphicList} node.
- * <br><br>
- * The definition of empty simply means that the node does not have an existing
- * element currently stored within it. Use this class to represent the end of 
- * the list.
- * <br><br>
- * To ensure that no {@link NonEmptyList} nodes are instantiating copies of
+ *
+ * <p> The definition of empty simply means that the node does not have an
+ * existing element currently stored within it. Use this class to represent the
+ * end of the list.
+ *
+ * <p> To ensure that no {@link NonEmptyList} nodes are instantiating copies of
  * this class, it is implemented as a singleton, that can be accessed through
  * the {@link #getInstance()} method.
  *
@@ -85,8 +85,8 @@ public class EmptyList<E extends Comparable<E>> implements PolymorphicList<E> {
     /**
      * Removes the element at a position in the {@code PolymorphicList}
      * specified by {@code index}.
-     * <br><br>
-     * If the {@code index} is greater than the number of elements in the
+     *
+     * <p> If the {@code index} is greater than the number of elements in the
      * polymorphic list, then the last element would be removed.
      *
      * @param index the index position of the element to be removed

@@ -8,22 +8,20 @@ import java.util.Iterator;
  * This abstract class provides a skeletal implementation to the
  * {@link ArrayList} interface, outlining the methods and fields that would
  * have similar behaviors across various abstractions.
- * <br><br>
- * The array to be used by the {@code ArrayList} will be a protected field
+ *
+ * <p> The array to be used by the {@code ArrayList} will be a protected field
  * {@link #arr} in this class. However, implementations that require array
  * copying will not be implemented here, due to complications with casting for
  * different generic types {@link E}. It is recommended that every abstraction
  * implement these methods their own respective way.
- * <br><br>
- * There are also no constructors provided in this class for the same reason
+ *
+ * <p> There are also no constructors provided in this class for the same reason
  * described above.
- * <br><br>
- * All {@code add} methods relies on the {@link #ensureCapacity(int)} method to
- * automatically resize the array in accordance to the need of space, adding
+ *
+ * <p> All {@code add} methods relies on the {@link #ensureCapacity(int)} method
+ * to automatically resize the array in accordance to the need of space, adding
  * an extra space of {@code 10}  elements everytime to the array is fully
  * filled. However, it does not remove that extra space automatically.
- * <br><br>
- * Some behaviors are already defined in the {@link AbstractList} class.
  *
  * @param <E> generic type parameter determining the type of object the
  *            {@code ArrayList} would store.

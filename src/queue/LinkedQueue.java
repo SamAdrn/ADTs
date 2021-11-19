@@ -6,15 +6,15 @@ import java.util.NoSuchElementException;
 
 /**
  * This class is an implementation of the {@link Queue} interface.
- * <br><br>
- * The {code LinkedQueue} class uses a {@link DoublyLinkedList} to represent
+ *
+ * <p> The {code LinkedQueue} class uses a {@link DoublyLinkedList} to represent
  * a queue. Every time an element is enqueued in the queue, the element will be
  * added to the {@link DoublyLinkedList#tail tail} of the list, in other words
  * the back of the queue. Meanwhile, to dequeue an element, the element will be
  * removed from the {@link DoublyLinkedList#head head} of the list, in other
  * words the front of the queue.
- * <br><br>
- * All methods run in the best-case time complexity equivalent to the
+ *
+ * <p> All methods run in the best-case time complexity equivalent to the
  * {@link DoublyLinkedList} class. This is because the queue is based on both
  * the head and tail of the list, in which the {@link DoublyLinkedList} supports
  * as the beginning of iterations.

@@ -7,13 +7,13 @@ import java.util.Objects;
 
 /**
  * This class is an implementation of the {@link LinkedList} interface.
- * <br><br>
- * The {@code SinglyLinkedList} is the most common implementation of a
+ *
+ * <p> The {@code SinglyLinkedList} is the most common implementation of a
  * {@code LinkedList}. Traversing in a {@code SinglyLinkedList} only goes
  * one-way: from the {@link #head} to the end of the list, otherwise known as
  * the tail.
- * <br><br>
- * The insertion order in a {@code SinglyLinkedList} is maintained until a
+ *
+ * <p> The insertion order in a {@code SinglyLinkedList} is maintained until a
  * change is made by the user through the {@link #set(int, Object)} method.
  * For example, if the {@code Collection} of elements : {@code [a1, a2, a3, ...,
  * an]} is inserted to the {@code SinglyLinkedList}, it will store it as
@@ -37,10 +37,10 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
 
     /**
      * This private inner class defines a node to be used for storing elements
-     * in a {@code LinkedList}.
+     * in a {@code SinglyLinkedList}.
      *
      * @param <E> generic type parameter determining the type of object the
-     *            {@code LinkedList} would store.
+     *            {@code SinglyLinkedList} would store.
      */
     private static class Node<E> {
 
@@ -118,12 +118,11 @@ public class SinglyLinkedList<E> extends AbstractLinkedList<E> {
     /**
      * Inserts a {@code Collection} of elements to a position in the
      * {@code LinkedList} specified by {@code index}.
-     * <br><br>
-     * This method is overridden from the {@link list.AbstractList} class to
-     * implement a more efficient method of successively adding all
-     * elements in the collection in one iteration, instead of traversing
-     * through the list over and over again with every {@link #add(int, Object)}
-     * method call.
+     *
+     * <p> This method is overridden from the {@link list.AbstractList} class to
+     * implement a more efficient method of successively adding all elements in
+     * the collection in one iteration, instead of traversing through the list
+     * over and over again with every {@link #add(int, Object)} method call.
      *
      * @param index the index position where the {@code Collection} of
      *              elements should be inserted

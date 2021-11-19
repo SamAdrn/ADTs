@@ -4,15 +4,15 @@ import java.util.EmptyStackException;
 
 /**
  * This interface represents the root interface of all {@code Stack} objects.
- * <br><br>
- * A stack is a type of data structure that follows the FIFO (first-in
+ *
+ * <p> A stack is a type of data structure that follows the FIFO (first-in
  * first-out) principle. A great analogy of a stack would be a stack of plates,
  * in which elements can only be inserted to the top-most position of the
  * stack, and only the element at the top-most position can be removed.
- * <br><br>
- * Stacks also allows {@code null} elements. The stack's {@link #search(Object)}
- * method relies on the {@link java.util.Objects#equals(Object)
- * Objects.equals(a, b)} method.
+ *
+ * <p> Stacks also allows {@code null} elements. The stack's
+ * {@link #search(Object)} method relies on the {@link
+ * java.util.Objects#equals(Object) Objects.equals(a, b)} method.
  *
  * @author Samuel Adrian Kosasih
  *
@@ -67,8 +67,8 @@ public interface Stack<E> {
 
     /**
      * Retrieves the distance of element {@code e} from the top of the stack.
-     * <br><br>
-     * The method will return {@code -1} if the stack is empty, or {@code e}
+     * 
+     * <p> The method will return {@code -1} if the stack is empty, or {@code e}
      * does not exist.
      *
      * @param e the element to be searched

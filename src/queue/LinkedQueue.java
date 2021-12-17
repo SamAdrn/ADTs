@@ -14,7 +14,7 @@ import java.util.NoSuchElementException;
  * removed from the {@link DoublyLinkedList#head head} of the list, in other
  * words the front of the queue.
  *
- * <p> All methods run in the best-case time complexity equivalent to the
+ * <p> All methods run in the time complexity equivalent to the
  * {@link DoublyLinkedList} class. This is because the queue is based on both
  * the head and tail of the list, in which the {@link DoublyLinkedList} supports
  * as the beginning of iterations.

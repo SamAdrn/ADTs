@@ -1,3 +1,3 @@
 # ADTs
 
-This project is my attempt in constructing Data Structure within the Java Programming Language.
+This project is my attempt in constructing at Data Structures within the Java Programming Language.

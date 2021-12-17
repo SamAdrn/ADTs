@@ -219,7 +219,9 @@ public class DoublyLinkedList<E> extends AbstractLinkedList<E> {
         }
         Node<E> cur = findNode(index);
         E output = cur.element;
-        if (cur == head) {
+        if (cur == head && cur == tail) {
+            head = tail = null;
+        } else if (cur == head) {
             head = cur.next;
         } else if (cur == tail) {
             tail = cur.prev;

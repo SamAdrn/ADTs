@@ -12,10 +12,9 @@ import java.util.*;
  * parent a maximum number of two children (hence the name, binary). Each
  * element can now only have either a left child or a right child.
  *
- * @author Samuel Adrian Kosasih
- *
  * @param <E> generic type parameter determining the type of object the
  *            {@code Tree} would store.
+ * @author Samuel Adrian Kosasih
  * @version 1.1
  * @see Tree
  */
@@ -24,12 +23,12 @@ public class BinaryTree<E> implements Tree<E> {
     /**
      * The root of the {@code Tree}.
      */
-    private Node<E> root;
+    protected Node<E> root;
 
     /**
      * The number of elements currently stored in the {@code Tree}.
      */
-    private int size;
+    protected int size;
 
     /**
      * This private inner class defines a node to be used for storing elements
@@ -38,7 +37,7 @@ public class BinaryTree<E> implements Tree<E> {
      * @param <E> generic type parameter determining the type of object the
      *            {@code BinaryTree} would store.
      */
-    private static class Node<E> {
+    protected static class Node<E> {
 
         /**
          * The element being stored by the {@code Node}.
@@ -117,6 +116,9 @@ public class BinaryTree<E> implements Tree<E> {
     /**
      * Adds the element {@code newChild} as a child of {@code parent}.
      *
+     * <p> If the parent does not have a left child, then {@code newChild} will
+     * take its place, otherwise, it will become a right child.
+     *
      * <p> If the parent already has two nodes, then the method will return
      * {@code false}.
      *
@@ -136,6 +138,56 @@ public class BinaryTree<E> implements Tree<E> {
                 size++;
                 return true;
             } else if (n.right == null) {
+                n.right = newNode;
+                size++;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Adds the element {@code newChild} as a left child of {@code parent}.
+     *
+     * <p> If the parent already has a left child, then the method will return
+     * {@code false}.
+     *
+     * @param parent   the parent of the new element to be added
+     * @param newChild the new child element to be added
+     * @return {@code true} if {@code newChild} is added successfully
+     * @since 1.1
+     */
+    public boolean addLeftChild(E parent, E newChild) {
+        Node<E> n = findNode(parent, root);
+        if (n != null) {
+            Node<E> newNode = new Node<>(newChild);
+            newNode.parent = n;
+            if (n.left == null) {
+                n.left = newNode;
+                size++;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Adds the element {@code newChild} as a right child of {@code parent}.
+     *
+     * <p> If the parent already has a right child, then the method will return
+     * {@code false}.
+     *
+     * @param parent   the parent of the new element to be added
+     * @param newChild the new child element to be added
+     * @return {@code true} if {@code newChild} is added successfully
+     * @since 1.1
+     */
+    public boolean addRightChild(E parent, E newChild) {
+        Node<E> n = findNode(parent, root);
+        if (n != null) {
+            Node<E> newNode = new Node<>(newChild);
+            newNode.parent = n;
+            if (n.right == null) {
                 n.right = newNode;
                 size++;
                 return true;
@@ -165,6 +217,7 @@ public class BinaryTree<E> implements Tree<E> {
                 p.right = null;
             }
             size--;
+            return true;
         }
         return false;
     }
@@ -176,6 +229,10 @@ public class BinaryTree<E> implements Tree<E> {
      * {@link LinkedHashSet}, in which the first element will be the left child
      * of {@code e}, and the second element will be the right child of
      * {@code e}.
+     *
+     * <p> Note that the returned {@code Collection} will only consist of the
+     * two direct children of {@code e}, and will not consist of the lower
+     * descendants.
      *
      * <p> If the element {@code e} is not a parent, then an empty
      * {@code Collection} will be returned.
@@ -305,11 +362,8 @@ public class BinaryTree<E> implements Tree<E> {
      * Retrieves a {@code Collection} of elements stored at the level
      * {@code level} of the {@code Tree}.
      *
-     * <p> If the {@code Tree} is empty, then an empty {@code Collection} will
-     * be returned.
-     *
-     * <p> If the level {@code level} does not exist, then the method will
-     * return {@code null}.
+     * <p> If the {@code Tree} is empty or if the level {@code level} does not
+     * exist, then an empty {@code Collection} will be returned.
      *
      * @param level the level of the {@code Tree} in which the elements to be
      *              returned are stored
@@ -412,23 +466,30 @@ public class BinaryTree<E> implements Tree<E> {
      */
     @Override
     public int numChildren(E e) {
-        Node<E> n = findNode(e, root);
-        if (n != null) {
-            return (n.left != null && n.right != null) ? 2 :
-                    ((n.left != null || n.right != null) ? 1 : 0);
+        try {
+            Node<E> n = findNode(e, root);
+            if (n != null) {
+                return (n.left != null && n.right != null) ? 2 :
+                        ((n.left != null || n.right != null) ? 1 : 0);
+            }
+            return -1;
+        } catch (IllegalStateException ise) {
+            return 0;
         }
-        return -1;
     }
 
     /**
      * Retrieves the number of levels the {@code Tree} has.
+     * <p>
+     * If the tree is currently empty, then the tree is considered to have
+     * {@code 0} levels.
      *
      * @return the number of levels in the {@code Tree}
      * @since 1.1
      */
     @Override
     public int level() {
-        return level(root);
+        return level(root) + 1;
     }
 
     /**
@@ -441,7 +502,7 @@ public class BinaryTree<E> implements Tree<E> {
      */
     private int level(Node<E> n) {
         if (n != null) {
-            return Math.max(level(n.left), level(n.right) + 1);
+            return Math.max(level(n.left), level(n.right)) + 1;
         }
         return -1;
     }
@@ -493,21 +554,27 @@ public class BinaryTree<E> implements Tree<E> {
     /**
      * Retrieves the height of the element {@code e}.
      *
+     * If the element does not exist, or if the tree is empty, then the method
+     * will return {@code -1}.
+     *
      * @param e the element to be queried
      * @return the height of the element {@code e}
      * @since 1.1
      */
     @Override
     public int height(E e) {
-        Node<E> n = findNode(e, root);
-        if (n != null) {
-            return height(n);
+        try {
+            return height(findNode(e, root));
+        } catch (IllegalStateException ise) {
+            return -1;
         }
-        return -1;
     }
 
     /**
      * A private helper method to retrieve the height of the node {@code n}.
+     *
+     * If the element does not exist, or if the tree is empty, then the method
+     * will return {@code -1}.
      *
      * @param n the node to be queried
      * @return the height of the node {@code n}
@@ -529,11 +596,11 @@ public class BinaryTree<E> implements Tree<E> {
      */
     @Override
     public int depth(E e) {
-        Node<E> n = findNode(e, root);
-        if (n != null) {
-            return depth(n);
+        try {
+            return depth(findNode(e, root));
+        } catch (IllegalStateException ise) {
+            return -1;
         }
-        return -1;
     }
 
     /**
@@ -736,9 +803,9 @@ public class BinaryTree<E> implements Tree<E> {
     }
 
     /**
-     * A private helper method to traverse through the {@code Tree} and returns
-     * the {@code Node} which stores the element {@code e}. This method will
-     * start to traverse the tree from the {@code Node n}.
+     * A protected helper method to traverse through the {@code Tree} and
+     * returns the {@code Node} which stores the element {@code e}. This method
+     * will start to traverse the tree from the {@code Node n}.
      *
      * @param e the element of the {@code Node} to be searched
      * @param n the {@code Node} to start traversal
@@ -746,7 +813,7 @@ public class BinaryTree<E> implements Tree<E> {
      * @throws IllegalStateException if tree has no root
      * @since 1.1
      */
-    private Node<E> findNode(E e, Node<E> n) {
+    protected Node<E> findNode(E e, Node<E> n) {
         if (root == null) {
             throw new IllegalStateException("tree has no root");
         }
@@ -799,10 +866,12 @@ public class BinaryTree<E> implements Tree<E> {
      */
     private Collection<E> inorder(Node<E> n) {
         LinkedHashSet<E> c = new LinkedHashSet<>();
-        if (n != null) {
-            c.addAll(preorder(n.left));
-            c.add(n.element);
-            c.addAll(preorder(n.right));
+        if (n.left != null) {
+            c.addAll(inorder(n.left));
+        }
+        c.add(n.element);
+        if (n.right != null) {
+            c.addAll(inorder(n.right));
         }
         return c;
     }
@@ -823,8 +892,8 @@ public class BinaryTree<E> implements Tree<E> {
     private Collection<E> postorder(Node<E> n) {
         LinkedHashSet<E> c = new LinkedHashSet<>();
         if (n != null) {
-            c.addAll(preorder(n.left));
-            c.addAll(preorder(n.right));
+            c.addAll(postorder(n.left));
+            c.addAll(postorder(n.right));
             c.add(n.element);
         }
         return c;
